@@ -1,0 +1,20 @@
+.list-option{
+    color: #18191F;
+    margin-bottom: 50px;
+    font-family:  Manrope, sans-serif !important ;
+    & li{
+        font-size: 2.2rem;
+        font-weight: 600 ;
+        font-style: normal;
+        margin-bottom: 15px;
+        line-height: 34px;
+        font-feature-settings: 'liga' off;
+    }
+    & p{
+        font-weight: 400;
+        font-family:  Manrope, sans-serif !important ;
+        font-size: 1.2rem;
+        line-height: 33.73px;
+        width:500px
+    }
+}

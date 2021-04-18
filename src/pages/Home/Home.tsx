@@ -1,8 +1,8 @@
 import React from 'react';
-import {Navbar} from '../../components';
+import {Navbar,List} from '../../components';
 import {CustomButton,FlexContainer, Header3, ParagraphText,Image} from '../../styles';
 import {Colors} from '../../styles';
-import {pattern,brandimage} from '../../images';
+import {pattern,brandimage,groupimg} from '../../images';
 import './home.scss';
 
 export const Home = () => 
@@ -12,8 +12,8 @@ export const Home = () =>
         <div className='align-div'>
            <div className='flex-div'>
                 <div className='header-text'>
-                    <Header3>We Shop for you,</Header3>
-                    <Header3>and Deliver to you,</Header3>
+                    <Header3 fontSize="4.8rem">We Shop for you,</Header3>
+                    <Header3 fontSize='4.8rem'>and Deliver to you,</Header3>
                     <div className='header-image-container'>
                         <Image  width="40%" position='absolute' src={pattern}/>
                     </div>
@@ -39,4 +39,21 @@ export const Home = () =>
             </div>
         </div>
     </FlexContainer>
+
+    <div className='how-we-work' style={{background:Colors.tealColor2}} >
+        <Header3 className='how-we-work-header-text' color={Colors.darkColor}>How it Works <hr/></Header3>
+        <FlexContainer className='flex-width'>
+           <div className='image-container'>
+               <Image width="55%" src={groupimg}/>
+           </div>
+           <div style={{padding:'5px'}}>
+              <List headerText="Shop from your favorite store"
+              bodyText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis scelerisque at quam congue posuere libero in sit quam. Consequat, scelerisque non tincidunt sit lectus senectus.'/>
+              <List headerText='Copy & Paste  URL'
+               bodyText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis scelerisque at quam congue posuere libero in sit quam. Consequat, scelerisque non tincidunt sit lectus senectus.'/>
+              <List headerText='Make payments & Track shipment'
+               bodyText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis scelerisque at quam congue posuere libero in sit quam. Consequat, scelerisque non tincidunt sit lectus senectus.'/> 
+           </div>
+        </FlexContainer>
+    </div>
 </div>

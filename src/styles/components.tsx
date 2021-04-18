@@ -12,6 +12,10 @@ type imageProps = {
     position?:string
 }
 
+type textProps = {
+    fontSize?:string
+}
+
 export const InputBox = styled.input ``;
 
 export const CustomButton = styled.button<buttonProps>`
@@ -37,9 +41,9 @@ export const Header1 = styled.h1``;
 
 export const Header2 = styled.h2``;
 
-export const Header3 = styled.h3`
+export const Header3 = styled.h3<textProps>`
     font-family: 'Nunito', sans-serif;
-    font-size:4.8rem;
+    font-size:${(props:any)=>props.fontSize || '2.2rem'};
     color:${(props)=>props.color || Colors.whiteColor}
 `
 
