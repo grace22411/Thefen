@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import App from './App';
+import {Home} from './pages'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 
@@ -9,13 +9,13 @@ import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 const routing = (
   <Router>
      <Switch>
-          <Route exact path="/" component = {App}/>
+          <Route path="/" component = {Home}/>
       </Switch>
   </Router>
 )
 
 
-const rootElement= document.getElementById('root')
+const rootElement:any = document.getElementById('root')
 if(rootElement.hasChildNodes()){
     ReactDOM.hydrate(routing,rootElement)
 } else{
