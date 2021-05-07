@@ -1,7 +1,8 @@
 import {Logo} from './Logo/Logo';
 import Navbar from './Navbar/Navbar';
-import {List} from './List/List'
+import {List} from './List/List';
+import {ImageList} from './ImageList/ImageList'
 
 export {
-    Logo,List,Navbar
+    Logo,List,Navbar,ImageList
 }

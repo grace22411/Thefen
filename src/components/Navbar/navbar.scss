@@ -1,0 +1,7 @@
+@import '../../styles/responsive.scss';
+
+.nav-button-container{
+    @include mobile-phones{
+        display: none !important;
+    }
+}

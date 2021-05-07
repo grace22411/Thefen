@@ -34,7 +34,10 @@ export const ParagraphText = styled.p`;
     color:${(props:any)=>props.fontColor || Colors.lighterWhite};
     font-weight:${(props:any)=>props.weight || 400};
     font-size:1.29rem;
-    line-height:24px
+    line-height:24px;
+    @media (max-width:1000px){
+        font-size:.99rem
+    }
 
 `
 export const Header1 = styled.h1``;
@@ -43,8 +46,12 @@ export const Header2 = styled.h2``;
 
 export const Header3 = styled.h3<textProps>`
     font-family: 'Nunito', sans-serif;
-    font-size:${(props:any)=>props.fontSize || '2.2rem'};
-    color:${(props)=>props.color || Colors.whiteColor}
+    font-size:${(props:any)=>props.fontSize || '1.4rem'};
+    color:${(props)=>props.color || Colors.whiteColor};
+
+    @media (max-width:1000px){
+        font-size:2.64rem
+    }
 `
 
 export const Image  = styled.img<imageProps>`

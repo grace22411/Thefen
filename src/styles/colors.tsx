@@ -10,6 +10,6 @@ export const Colors = {
     redColor: '#D72638',
     lightGrey:'#EDF0F8',
     darkColor:'#18191F',
-    tealColor2:'#F6F7FB'
+    tealColor2:'#F6F7FB',
     
 }

@@ -1,3 +1,5 @@
+@import '../../styles/responsive.scss';
+
 .list-option{
     color: #18191F;
     margin-bottom: 50px;
@@ -15,6 +17,6 @@
         font-family:  Manrope, sans-serif !important ;
         font-size: 1.2rem;
         line-height: 33.73px;
-        width:500px
+        width:500px;
     }
 }

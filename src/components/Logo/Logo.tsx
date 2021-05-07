@@ -7,7 +7,7 @@ type LogoProps = {
     image?: string
 }
 
-export const Logo:FunctionComponent<LogoProps> = ({image}) => 
+export const Logo:FunctionComponent<LogoProps> = () => 
     <div className='logo-flex'>
         <a href="/">
             <img src={logo} alt=""/>
