@@ -11,5 +11,6 @@ export const Colors = {
     lightGrey:'#EDF0F8',
     darkColor:'#18191F',
     tealColor2:'#F6F7FB',
+    lighterGrey:'#515B7B'
     
 }

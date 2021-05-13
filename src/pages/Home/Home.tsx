@@ -2,11 +2,11 @@ import React from 'react';
 import {Navbar,List,ImageList} from '../../components';
 import {CustomButton,FlexContainer, Header3, ParagraphText,Image} from '../../styles';
 import {Colors} from '../../styles';
-import {pattern,brandimage,groupimg} from '../../images';
+import {pattern,brandimage,groupimg,laptopsurf,payment,website_shop} from '../../images';
 import './home.scss';
 
 export const Home = () => 
-<div>
+<div className='page-container'>    
     <Navbar/>
     <FlexContainer background={Colors.blueColor}  className='large-wrapper'>
         <div className='align-div'>
@@ -43,14 +43,25 @@ export const Home = () =>
     <div className='how-we-work' style={{background:Colors.tealColor2}} >
         <Header3 className='how-we-work-header-text' color={Colors.darkColor}>How it Works <hr/></Header3>
         <FlexContainer className='flex-width'>
-           <div className='image-container'>
+           <div className='image-container group-image'>
                <Image width="55%" src={groupimg}/>
            </div>
            <div style={{padding:'5px'}}>
+              <div className='how-we-work-img'>
+                  <img src={laptopsurf} alt=''/>
+              </div>
               <List headerText="Shop from your favorite store"
               bodyText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis scelerisque at quam congue posuere libero in sit quam. Consequat, scelerisque non tincidunt sit lectus senectus.'/>
+               
+               <div className='how-we-work-img'>
+                  <img src={website_shop} alt=''/>
+              </div >
               <List headerText='Copy & Paste  URL'
                bodyText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis scelerisque at quam congue posuere libero in sit quam. Consequat, scelerisque non tincidunt sit lectus senectus.'/>
+              
+              <div className='how-we-work-img'>
+                  <img src={payment} alt=''/>
+              </div>
               <List headerText='Make payments & Track shipment'
                bodyText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis scelerisque at quam congue posuere libero in sit quam. Consequat, scelerisque non tincidunt sit lectus senectus.'/> 
            </div>
@@ -95,4 +106,5 @@ export const Home = () =>
     <footer className='footer-section'>
         <ParagraphText>© 2021 Northsnow. All rights reserved</ParagraphText>
     </footer>
+    
 </div>

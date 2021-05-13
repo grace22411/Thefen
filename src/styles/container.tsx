@@ -13,7 +13,7 @@ export const FlexContainer = styled.div<ContainerProps>`
     background-color:${props=>props.background};
     border:${(props:any) =>props.border};
     display:flex;
-    padding:${(props:any) =>props.padding}
+    padding:${(props:any) =>props.padding};
     flex-direction:${(props:any) => props.flexDirection};
     justify-content:${(props:any)=> props.justify}
 `

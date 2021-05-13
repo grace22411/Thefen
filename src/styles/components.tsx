@@ -13,7 +13,9 @@ type imageProps = {
 }
 
 type textProps = {
-    fontSize?:string
+    fontSize?:string,
+    textAlign?:string,
+    fontColor?:string
 }
 
 export const InputBox = styled.input ``;
@@ -30,7 +32,7 @@ export const CustomButton = styled.button<buttonProps>`
     }
 `
 
-export const ParagraphText = styled.p`;
+export const ParagraphText = styled.p <textProps>`;
     color:${(props:any)=>props.fontColor || Colors.lighterWhite};
     font-weight:${(props:any)=>props.weight || 400};
     font-size:1.29rem;
@@ -48,6 +50,7 @@ export const Header3 = styled.h3<textProps>`
     font-family: 'Nunito', sans-serif;
     font-size:${(props:any)=>props.fontSize || '1.4rem'};
     color:${(props)=>props.color || Colors.whiteColor};
+    text-align:${(props)=>props.textAlign || 'center'};
 
     @media (max-width:1000px){
         font-size:2.64rem
