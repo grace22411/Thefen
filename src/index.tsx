@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import {Home,Login} from './pages'
+import {Home,Login,ForgotPassword,NewPassword} from './pages'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 
@@ -9,8 +9,10 @@ import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 const routing = (
   <Router>
      <Switch>
-          {/* <Route path="/" component = {Home}/> */}
+        <Route exact path="/" component = {Home}/> 
           <Route path='/login' component={Login}/> 
+          <Route path='/forgotpassword' component={ForgotPassword}/> 
+          <Route path='/newpassword' component={NewPassword}/> 
       </Switch>
   </Router>
 )
