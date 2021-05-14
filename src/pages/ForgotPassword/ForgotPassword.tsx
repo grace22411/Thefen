@@ -16,7 +16,7 @@ export const ForgotPassword = () => {
                 <div className='login-form'>
                 <FlexContainer className='login-content' flexDirection='column' >
                     <div className='login-content-header login-content-div'>
-                        <Header3 fontSize='2.3rem' className='login-welcome-title' color={Colors.blueColor} >Forgot Password </Header3>
+                        <Header3 textAlign='center' fontSize='2.3rem' className='login-welcome-title' color={Colors.blueColor} >Forgot Password </Header3>
                         <ParagraphText className='login_p_text' fontColor={Colors.lighterGrey}>Please enter your login email address and we will send a recovery link to your email.</ParagraphText>
                     </div>
                     <div className='login-form-display login-content-form login-content-div'>

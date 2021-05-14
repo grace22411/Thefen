@@ -1,0 +1,89 @@
+@import '../../styles/responsive.scss';
+@import '../../styles/general.scss';
+
+
+.register-container{
+    background-color: #1032A0;
+    &-content{
+        
+        width: inherit;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+    }
+}
+
+.register-container-content, .register-section-container,.register-section-1{
+    display: flex;
+}
+
+.register-content-button, .register-form-display{
+    width:95%
+}
+
+.register-section-container{
+   box-shadow: 0 0 40px 0 #08194F ;
+    height: 90%;
+    width: 70%;  
+    @include mobile-phones{
+        height: 95%;
+        width: 90%;
+        overflow: scroll;
+    }  
+}
+
+.register-section{
+    flex: 1;
+    &-1{
+        padding:20px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+         @include mobile-phones{
+             display: none;
+         }
+    }
+    &-2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobile-phones{
+            padding:15px;
+        }
+    } 
+}
+.form-section{
+    background-color: #fff;
+}
+
+.intro-text-header{
+    margin-bottom: 10px;
+}
+.intro-text-p{
+    font-family: Nunito;
+    font-weight: 100;
+    margin:0 auto;
+    width: 70%;
+}
+
+.register-form-display{
+    & .input-box{
+        margin-bottom: 30px;
+        @include mobile-phones{
+            margin-bottom: 15px;
+
+        }
+    }
+}
+.register-remember-me{
+    display: flex;
+    & label{
+        margin-left: 10px;
+        position: relative;
+        top:-2px;
+        & a{
+            color: #1032A0;
+            font-weight: 800;
+        }
+    }
+}

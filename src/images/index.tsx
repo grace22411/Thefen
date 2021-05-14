@@ -6,8 +6,9 @@ import flower from './flower.png';
 import laptopsurf from './laptop-surf.png';
 import payment from './payment.png';
 import website_shop from './website-shop.png';
+import flyover from './fly_over.png';
 
 
 export  {
-    brandimage,groupimg,logo,pattern,flower,laptopsurf,payment,website_shop
+    brandimage,flyover,groupimg,logo,pattern,flower,laptopsurf,payment,website_shop
 }
