@@ -17,7 +17,7 @@ export const Register = () => {
                             <img alt='Move your items' src={flyover}/>
                         </div>
                         <div className='register-section-1-text' >
-                            <Header3 fontSize="1.6rem" className='intro-text-header'>Welcome to NorthSnow </Header3>
+                            <Header3 textAlign='center' fontSize="1.6rem" className='intro-text-header'>Welcome to NorthSnow </Header3>
                             <ParagraphText className='intro-text-p'>Start shopping and shipping from overseas by creating your account.</ParagraphText>
                         </div>
                     </div>
