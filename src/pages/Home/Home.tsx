@@ -1,7 +1,8 @@
 import React from 'react';
 import {Navbar,List,ImageList} from '../../components';
+import {Link} from 'react-router-dom';
 import {CustomButton,FlexContainer, Header3, ParagraphText,Image} from '../../styles';
-import {Colors} from '../../styles';
+import {Colors} from '../../styles/colors';
 import {pattern,brandimage,groupimg,laptopsurf,payment,website_shop} from '../../images';
 import './home.scss';
 
@@ -27,9 +28,11 @@ export const Home = () =>
             
            
             <div className='button-container'>
-                <CustomButton width='140' className='font-noto'  bgColor={Colors.redColor}>
+                <Link to='/register'>
+                    <CustomButton width='140' className='font-noto'  bgColor={Colors.redColor}>
                     Get Started
-                </CustomButton>
+                    </CustomButton>
+                </Link>
             </div>
            
         </div>
@@ -106,5 +109,4 @@ export const Home = () =>
     <footer className='footer-section'>
         <ParagraphText>© 2021 Northsnow. All rights reserved</ParagraphText>
     </footer>
-    
 </div>

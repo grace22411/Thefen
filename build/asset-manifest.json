@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb45218b.chunk.css",
+    "main.js": "/static/js/main.e1536881.chunk.js",
+    "main.js.map": "/static/js/main.e1536881.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b44c3e54.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b44c3e54.js.map",
+    "static/js/2.1b9629d0.chunk.js": "/static/js/2.1b9629d0.chunk.js",
+    "static/js/2.1b9629d0.chunk.js.map": "/static/js/2.1b9629d0.chunk.js.map",
+    "static/js/3.2f5aa8d1.chunk.js": "/static/js/3.2f5aa8d1.chunk.js",
+    "static/js/3.2f5aa8d1.chunk.js.map": "/static/js/3.2f5aa8d1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.eb45218b.chunk.css.map": "/static/css/main.eb45218b.chunk.css.map",
+    "static/js/2.1b9629d0.chunk.js.LICENSE.txt": "/static/js/2.1b9629d0.chunk.js.LICENSE.txt",
+    "static/media/brand-picture.6a84bf85.png": "/static/media/brand-picture.6a84bf85.png",
+    "static/media/fly_over.f90cd441.png": "/static/media/fly_over.f90cd441.png",
+    "static/media/group-img.247559d4.png": "/static/media/group-img.247559d4.png",
+    "static/media/laptop-surf.a48d0ae7.png": "/static/media/laptop-surf.a48d0ae7.png",
+    "static/media/pattern-bottom.b11b99f8.svg": "/static/media/pattern-bottom.b11b99f8.svg",
+    "static/media/payment.00ebd1b2.png": "/static/media/payment.00ebd1b2.png",
+    "static/media/website-shop.5593e749.png": "/static/media/website-shop.5593e749.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b44c3e54.js",
+    "static/js/2.1b9629d0.chunk.js",
+    "static/css/main.eb45218b.chunk.css",
+    "static/js/main.e1536881.chunk.js"
+  ]
+}

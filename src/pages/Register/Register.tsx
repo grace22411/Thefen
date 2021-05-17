@@ -1,8 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {CustomButton,FlexContainer, Header3, ParagraphText} from '../../styles';
 import  {InputBox} from '../../components';
-import {flyover} from '../../images'
-import {Colors} from '../../styles';
+import {flyover} from '../../images';
+import {Colors} from '../../styles/colors';
 import '../Login/login.scss';
 import './register.scss';
 
@@ -33,7 +34,7 @@ export const Register = () => {
                                     <InputBox labelText='Password' inputType='password'/>
                                     <div className='register-remember-me'>
                                        <input type="checkbox"/>
-                                        <label>By clicking the “Sign up” button, you agree to Northsnow’s <a>Terms & Conditions.</a></label>
+                                        <label>By clicking the “Sign up” button, you agree to Northsnow’s <Link to='/'>Terms & Conditions.</Link></label>
                                     </div>
                             </div>
                             <div className='login-content-button login-content-div register-content-button'>
