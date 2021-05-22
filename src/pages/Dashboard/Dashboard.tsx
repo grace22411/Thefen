@@ -30,7 +30,15 @@ export const Dashboard = () => {
                         <div className='box  box-2'>
                             <div className='url'>
                                 <div className="url-header">
-                                    <Header3 color={Colors.blueColor}>Address</Header3>
+                                    <Header3 color={Colors.blueColor}>URL</Header3>
+                                </div>
+                                <div className='url-form'>
+                                    <div className='url-form-section'>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+
+                                    </div>
                                 </div>
                             </div>
                             <div className='shipping-info'></div>
