@@ -1,0 +1,88 @@
+@import '../../styles/responsive.scss';
+
+
+.dashboard-container{
+    background-color: #F2F5FA;
+    height: 100%;
+    width: 100%;
+}
+
+.dashboard-content{
+  
+   
+    position: relative;
+    top:40px;
+    
+}
+
+.nav-section{
+   
+    border-bottom: 1px solid #E8EBF0 ;
+}
+.nav-container{
+   
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+
+    & .menu-option{
+
+    }
+}
+
+.nav-container,.dashboard-info{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menu-option,.icon-div{
+    display: flex;
+    align-items: center;
+}
+
+.icon-div{
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 3px 0px 2px 1px rgba(63, 63, 68, 0.05);
+}
+
+.dashboard-info{
+    margin-top: 50px;
+}
+.dashboard-info-container{
+    display: flex;
+    & .box{
+        padding: 10px;
+       
+        &-1{
+            flex:1;
+        }
+        &-2{
+            flex:3;
+            
+        }
+    }
+}
+
+.url{
+   height: 400px;
+   &-header{
+       padding: 15px 40px;
+       border-bottom: 1px solid #E8EBF0;
+   }
+   
+}
+.shipping-info{
+    height: 20px;
+
+}
+.url, .shipping-info{
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}

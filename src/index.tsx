@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import {Home,Login,ForgotPassword,NewPassword,Register} from './pages'
+import {Home,Login,ForgotPassword,NewPassword,Register,Dashboard} from './pages'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 
@@ -14,6 +14,7 @@ const routing = (
         <Route path='/forgotpassword' component={ForgotPassword}/> 
         <Route path='/newpassword' component={NewPassword}/> 
         <Route path='/register' component={Register}/> 
+        <Route path='/dashboard' component={Dashboard}/> 
       </Switch>
   </Router>
 )

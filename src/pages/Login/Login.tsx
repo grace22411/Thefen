@@ -16,7 +16,7 @@ export const Login = () =>{
                 <div className='login-form'>
                    <FlexContainer className='login-content' flexDirection='column' >
                        <div className='login-content-header login-content-div'>
-                           <Header3 fontSize='2.3rem' className='login-welcome-title' color={Colors.blueColor} >Hi, Welcome back! </Header3>
+                           <Header3 fontSize='2.3rem' textAlign="center" className='login-welcome-title' color={Colors.blueColor} >Hi, Welcome back! </Header3>
                            <ParagraphText className='login_p_text' fontColor={Colors.lighterGrey}>we are so glad to have you back again, please sign in with your details below.</ParagraphText>
                        </div>
                        <div className='login-form-display login-content-form login-content-div'>
