@@ -1,4 +1,4 @@
-import React,{FunctionComponent} from 'react'
+import React from 'react'
 import {profile} from '../../images';
 import './pagebox.scss';
 
@@ -18,7 +18,7 @@ export const PageBox = () => {
                         <p>Hello Tunde, please add your house address to enable us ship your orders to you.</p>
                     </div>
                     <div className='cta-to-add'>
-                        <a>Add Shipping Address</a>
+                        <a href='/'>Add Shipping Address</a>
                     </div>
                 </div>
             </div>

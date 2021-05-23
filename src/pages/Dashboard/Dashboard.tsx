@@ -1,13 +1,13 @@
 import React from 'react'
-import { Colors, FlexContainer, Header3 } from '../../styles';
-import {Logo,PageBox} from '../../components';
+import { Colors, CustomButton, FlexContainer, Header3 } from '../../styles';
+import {Logo,PageBox,ItemForm} from '../../components';
 import './dashboard.scss';
 import {notification,logout} from '../../images'
 
 
 export const Dashboard = () => {
     return (
-        <div className='dashboard-container'> 
+        <div className=' container dashboard-container'> 
             <div className='dashboard-content'>
                 <div className='nav-section'>
                     <FlexContainer className='nav-container'>
@@ -33,11 +33,10 @@ export const Dashboard = () => {
                                     <Header3 color={Colors.blueColor}>URL</Header3>
                                 </div>
                                 <div className='url-form'>
-                                    <div className='url-form-section'>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-
+                                    <ItemForm/>
+                                    <div className='add-button-container'>
+                                        <CustomButton borderRadius='4px'>Send</CustomButton>
+                                        <CustomButton></CustomButton>
                                     </div>
                                 </div>
                             </div>

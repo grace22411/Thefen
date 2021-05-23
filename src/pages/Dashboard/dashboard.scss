@@ -1,26 +1,19 @@
 @import '../../styles/responsive.scss';
-
+@import '../../styles/general.scss';
 
 .dashboard-container{
     background-color: #F2F5FA;
-    height: 100%;
-    width: 100%;
 }
 
 .dashboard-content{
-  
-   
     position: relative;
     top:40px;
-    
 }
 
 .nav-section{
-   
     border-bottom: 1px solid #E8EBF0 ;
 }
 .nav-container{
-   
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -64,13 +57,11 @@
         }
         &-2{
             flex:3;
-            
         }
     }
 }
 
 .url{
-   height: 400px;
    &-header{
        padding: 15px 40px;
        border-bottom: 1px solid #E8EBF0;
@@ -85,4 +76,31 @@
     background-color: #fff;
     border-radius: 6px;
     margin-bottom: 20px;
+}
+
+.url-form{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.additional-info{
+    margin:0 auto;
+    width: 95%;
+    font-family: Nunito;
+}
+
+.input-group-div{
+    font-family: Nunito;
+    & label{
+        color: #061443;
+        margin-bottom: 10px !important;
+        font-weight: 700;
+        & span{
+            color: #EB651A;
+        }
+    }
+}
+
+.additional-info{
+   margin: 10px auto;
 }

@@ -15,7 +15,8 @@ type imageProps = {
 type textProps = {
     fontSize?:string,
     textAlign?:string,
-    fontColor?:string
+    fontColor?:string,
+    weight?:string
 }
 
 export const InputBox = styled.input ``;
@@ -36,7 +37,7 @@ export const ParagraphText = styled.p <textProps>`;
     color:${(props:any)=>props.fontColor || Colors.lighterWhite};
     font-weight:${(props:any)=>props.weight || 400};
     text-align:${(props:any)=>props.textAlign};
-    font-size:1.29rem;
+    font-size: ${(props:any)=>props.fontSize || '1.29rem'};
     line-height:24px;
     @media (max-width:1000px){
         font-size:.99rem
