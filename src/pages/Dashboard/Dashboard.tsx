@@ -2,7 +2,7 @@ import React from 'react'
 import { Colors, CustomButton, FlexContainer, Header3 } from '../../styles';
 import {Logo,PageBox,ItemForm} from '../../components';
 import './dashboard.scss';
-import {notification,logout} from '../../images'
+import {notification,logout,plus} from '../../images'
 
 
 export const Dashboard = () => {
@@ -35,8 +35,8 @@ export const Dashboard = () => {
                                 <div className='url-form'>
                                     <ItemForm/>
                                     <div className='add-button-container'>
-                                        <CustomButton borderRadius='4px'>Send</CustomButton>
-                                        <CustomButton></CustomButton>
+                                        <CustomButton bgColor={Colors.blueColor} borderRadius='10px'>Send</CustomButton>
+                                        <CustomButton  bgColor={Colors.whiteColor} width='120' borderRadius='10px' fontColor={Colors.blueColor} className='add-more'><img src={plus} alt='plus-con'/>Add URL</CustomButton>
                                     </div>
                                 </div>
                             </div>

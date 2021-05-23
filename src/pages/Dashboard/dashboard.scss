@@ -45,7 +45,8 @@
 }
 
 .dashboard-info{
-    margin-top: 50px;
+   position: relative;
+   top:30px
 }
 .dashboard-info-container{
     display: flex;
@@ -69,13 +70,14 @@
    
 }
 .shipping-info{
-    height: 20px;
+    height: 120px;
 
 }
 .url, .shipping-info{
     background-color: #fff;
     border-radius: 6px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .url-form{
@@ -103,4 +105,25 @@
 
 .additional-info{
    margin: 10px auto;
+}
+
+.add-more{
+    position: relative;
+    border: 1px solid #1032A0;
+    & img{
+        position: absolute;
+        width: 18px;
+        left:8px;
+        height: 18px;
+    }
+    &:hover{
+    }
+}
+
+.add-button-container{
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }

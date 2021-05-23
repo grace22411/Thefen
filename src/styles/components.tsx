@@ -5,7 +5,8 @@ type buttonProps  = {
     fontColor?:string;
     bgColor?:string;
     borderRadius?:string;
-    width?: any
+    width?: any;
+   
 }
 
 type imageProps = {
@@ -22,14 +23,14 @@ type textProps = {
 export const InputBox = styled.input ``;
 
 export const CustomButton = styled.button<buttonProps>`
-   background-color:${(props:any) => props.bgColor || Colors.lightGrey};
+    background-color:${(props:any) => props.bgColor || Colors.lightGrey};
     color:${(props:any)=>props.fontColor || Colors.whiteColor};
     padding:10px;
     width:${(props:any) =>props.width || '98'}px;
     margin:5px;
     border-radius:${(props:any) =>props.borderRadius || '100px'};
     &:hover{
-        border:none;
+       
     }
 `
 
