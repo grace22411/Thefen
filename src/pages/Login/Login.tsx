@@ -23,8 +23,6 @@ export const Login = () =>{
                             <InputBox labelText='Email' inputType='text'/>
                             <InputBox labelText='Password' inputType='password'/>
                             <div className='remember-me'>
-                                <InputBox inputType='checkbox' labelText='Remember me'/>
-                                <p>Forgot password?</p>
                             </div>
                        </div>
                        <div className='login-content-button login-content-div'>

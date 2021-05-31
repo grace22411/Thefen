@@ -11,8 +11,6 @@ type ItemProp = {
 }
 
 export const ItemForm = ({removeIndex,index,itemLength,data,handleChange}:ItemProp) => {
-
-    console.log(index);
     return (
         <div className='url-form-section'>
             <div className='input-group input-group-flex'>
