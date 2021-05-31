@@ -71,6 +71,9 @@
     }
     &-div{
         margin-bottom: 25px;
+        @include mobile-phones{
+            margin-bottom: 5px;
+        }
     }
 
     @include mobile-phones{

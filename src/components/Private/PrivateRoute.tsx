@@ -12,11 +12,11 @@ interface PrivateRouteProps extends RouteProps {
 
 export const PrivateRoute = (props: PrivateRouteProps) => {
     const { component: Component, ...rest } = props;
-    const isAuthenticated = localStorage.getItem('token');
+    const isAuthenticated = localStorage.getItem('token') ;
     return (
         <Route{...rest}
             render={(routeProps) =>
-                !isAuthenticated ? (
+                isAuthenticated !== null ? (
                     <Component {...routeProps} />
                 ) : (
                         <Redirect

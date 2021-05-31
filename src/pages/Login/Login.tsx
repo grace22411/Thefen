@@ -17,13 +17,20 @@ export const Login = (props:any) =>{
     }
 
     const loginMethod = async(e:any) =>{
+        console.group(formData);
         e.preventDefault();
         const {history} = props;
         try{
             const result = await loginCall(formData);
-            console.log(result);
+            console.log(result.data);
+            if(result.status === 200){
+                console.log(result.data.data.token);
+                 localStorage.setItem('token',result.data.data.token);
+                // setLoggedIn(true);
+                 props.history.push('/dashboard');
+            }
         }catch(e){
-            console.log(e.response.data);
+            console.log(e);
         }
     }
 
@@ -46,7 +53,7 @@ export const Login = (props:any) =>{
                             </div>
                        </div>
                        <div className='login-content-button login-content-div'>
-                            <CustomButton bgColor={Colors.blueColor}>Login</CustomButton>
+                            <CustomButton onClick={loginMethod} bgColor={Colors.blueColor}>Login</CustomButton>
                        </div>
                        <div className='create-account'>
                            <p>Don't have an account? <span className='create-text'>Create one</span></p>
