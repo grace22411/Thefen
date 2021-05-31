@@ -55,6 +55,8 @@
        
         &-1{
             flex:1;
+            display: flex;
+            flex-direction: column;
         }
         &-2{
             flex:3;
@@ -67,11 +69,10 @@
        padding: 15px 40px;
        border-bottom: 1px solid #E8EBF0;
    }
-   
 }
-.shipping-info{
-    height: 120px;
 
+.shipping-info{
+    height: 50px;
 }
 .url, .shipping-info{
     background-color: #fff;
@@ -116,8 +117,6 @@
         left:8px;
         height: 18px;
     }
-    &:hover{
-    }
 }
 
 .add-button-container{
@@ -126,4 +125,27 @@
     margin: 0 auto;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.country-list{
+    background-color: #fff;
+    width: 95%;
+    min-height: 200px;
+    border-radius: 6px;
+    margin-top: 20px;
+    & .text-header, .image-list{
+        padding:10px;
+    }
+}
+
+.text-header{
+    text-align: center;
+    & h3{
+        color: #2C4AAB;
+        font-family: Nunito;
+    }
+}
+
+.remove-btn{
+    color: black;
 }

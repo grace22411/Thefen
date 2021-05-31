@@ -4,6 +4,7 @@ import './index.scss';
 import {Home,Login,ForgotPassword,NewPassword,Register,Dashboard} from './pages'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
+import {PrivateRoute} from './components/Private/PrivateRoute'
 
 
 const routing = (
@@ -14,7 +15,7 @@ const routing = (
         <Route path='/forgotpassword' component={ForgotPassword}/> 
         <Route path='/newpassword' component={NewPassword}/> 
         <Route path='/register' component={Register}/> 
-        <Route path='/dashboard' component={Dashboard}/> 
+        <PrivateRoute path='/dashboard' component={Dashboard}/> 
       </Switch>
   </Router>
 )

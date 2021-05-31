@@ -1,14 +1,24 @@
 import React from 'react'
-import { Colors, Header3, ParagraphText } from '../../styles';
+import { Colors, CustomButton, Header3, ParagraphText } from '../../styles';
 
 
-export const ItemForm = () => {
+type ItemProp = {
+  index: number
+  data:any,
+  itemLength:number,
+  handleChange:(e:any)=>void,
+  removeIndex:(e:any)=>void
+}
+
+export const ItemForm = ({removeIndex,index,itemLength,data,handleChange}:ItemProp) => {
+
+    console.log(index);
     return (
         <div className='url-form-section'>
             <div className='input-group input-group-flex'>
                 <div className='input-group-div flex-3'>
                     <label>Shopping URL <span>*</span> </label>
-                    <div className='input-box'><input/></div>
+                    <div className='input-box'><input onChange={handleChange} name={data?.url} /></div>
                 </div>
                 <div className=' input-group-div flex-1'>
                     <label>Price <span>*</span> </label>
@@ -43,6 +53,13 @@ export const ItemForm = () => {
                     <div className='input-box'><textarea rows="5"></textarea></div>
                 </div>
             </div>
+
+            { itemLength > 1 && 
+            <div className='input-group input-group-flex'>
+                <div className ='input-group-div flex-1'>
+                   <CustomButton onClick={()=>removeIndex(index)} borderRadius='4px' fontColor={Colors.blueColor} width='120' className='remove-btn'>Remove URL</CustomButton>
+                </div>
+            </div> }
         </div>
     )
 }
