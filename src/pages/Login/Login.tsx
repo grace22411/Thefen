@@ -8,29 +8,41 @@ import {loginCall} from './LoginService'
 
 
 export const Login = (props:any) =>{
-    const [formData,updateValues] = useState({email:'',password:''});
+    const [formData,updateValues] = useState<any>({email:'',password:''});
+    const [spinner,changeSpinner] = useState(false);
+    const [errorText,updateErrorText]  = useState('');
 
     const handleInputChange = (e:any) => {
         const {name, value} = e.target
         updateValues({...formData, [name]: value})
-        console.log(formData)
     }
 
-    const loginMethod = async(e:any) =>{
+    const validate = () =>{
+        changeSpinner(()=>true);
+           if((formData.email === '' || formData.email === null ) || (formData.password === '' || formData.password === null)){
+                changeSpinner(()=>false);
+                return updateErrorText('Email or password cannot be empty');
+            }
+            else{ return loginMethod()};
+            
+    }
+
+    const loginMethod = async() =>{
+        updateErrorText('')
+        changeSpinner(()=>true);
         console.group(formData);
-        e.preventDefault();
-        const {history} = props;
-        try{
-            const result = await loginCall(formData);
-            //console.log(result.data);
+        
+       try{
+            const result =  await loginCall(formData);
+            changeSpinner(false);
+
             if(result.status === 200){
-                console.log(result.data.data);
-                 localStorage.setItem('token',result.data.data.token);
-                // setLoggedIn(true);
-                 props.history.push('/dashboard');
+                localStorage.setItem('token',result.data.data.token);
+                return props.history.push('/dashboard');
             }
         }catch(e){
-            console.log(e);
+            changeSpinner(false);
+            return updateErrorText('User does not exist');
         }
     }
 
@@ -53,13 +65,13 @@ export const Login = (props:any) =>{
                             </div>
                        </div>
                        <div className='login-content-button login-content-div'>
-                            <CustomButton onClick={loginMethod} bgColor={Colors.blueColor}>Login<Spinner start={false}/></CustomButton>
+                            <CustomButton onClick={validate} bgColor={Colors.blueColor}>Login<Spinner start={spinner}/></CustomButton>
+                            <ParagraphText textAlign='center' fontColor={Colors.redColor}>{errorText}</ParagraphText>
                        </div>
                        <div className='create-account'>
                            <p>Don't have an account? <span className='create-text'>Create one</span></p>
                        </div>
                    </FlexContainer>
-
                 </div>
             </div>
         </div>

@@ -53,7 +53,7 @@ export const Register = (props) => {
                                     <InputBox inputName='email'  handleChange={handleInputChange} labelText='Email' inputType='text'/>
                                     <InputBox inputName='phoneNumber'   handleChange={handleInputChange} labelText='Phone Number' inputType='text'/>
                                     <InputBox inputName='password'  handleChange={handleInputChange} labelText='Password' inputType='password'/>
-                                     <InputBox inputName='passwordConfirm'  handleChange={handleInputChange} labelText='Confirm Password' inputType='password'/> 
+                                    <InputBox inputName='passwordConfirm'  handleChange={handleInputChange} labelText='Confirm Password' inputType='password'/> 
                                     <div className='register-remember-me'>
                                        <input type="checkbox"/>
                                         <label>By clicking the “Sign up” button, you agree to Northsnow’s <Link to='/'>Terms & Conditions.</Link></label>
