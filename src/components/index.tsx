@@ -6,7 +6,8 @@ import {InputBox} from './InputBox/InputBox';
 import {PageBox} from './PageBox/PageBox';
 import {ItemForm} from './ItemForm/ItemForm';
 import {CountryList} from './CountryList/CountryList';
+import {Spinner} from './Spinner/Spinner';
 
 export {
-    Logo,List,Navbar,ImageList,InputBox,ItemForm,PageBox,CountryList
+    Logo,List,Navbar,ImageList,InputBox,ItemForm,PageBox,CountryList,Spinner
 }

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { Home } from '../Home/Home';
-import  {InputBox} from '../../components';
+import  {InputBox,Spinner} from '../../components';
 import {Colors} from '../../styles';
 import {CustomButton,FlexContainer, Header3, ParagraphText} from '../../styles';
 import './login.scss';
@@ -22,9 +22,9 @@ export const Login = (props:any) =>{
         const {history} = props;
         try{
             const result = await loginCall(formData);
-            console.log(result.data);
+            //console.log(result.data);
             if(result.status === 200){
-                console.log(result.data.data.token);
+                console.log(result.data.data);
                  localStorage.setItem('token',result.data.data.token);
                 // setLoggedIn(true);
                  props.history.push('/dashboard');
@@ -53,7 +53,7 @@ export const Login = (props:any) =>{
                             </div>
                        </div>
                        <div className='login-content-button login-content-div'>
-                            <CustomButton onClick={loginMethod} bgColor={Colors.blueColor}>Login</CustomButton>
+                            <CustomButton onClick={loginMethod} bgColor={Colors.blueColor}>Login<Spinner start={false}/></CustomButton>
                        </div>
                        <div className='create-account'>
                            <p>Don't have an account? <span className='create-text'>Create one</span></p>
