@@ -28,7 +28,7 @@ export const Register = (props) => {
             }
         } catch(e){
             console.log(e);
-        }
+        } 
     }
     return (
         <div className='container register-container'>

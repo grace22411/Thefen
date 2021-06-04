@@ -19,6 +19,9 @@ export const Login = (props:any) =>{
 
     const validate = () =>{
         changeSpinner(()=>true);
+        formData.email = formData.email.trim();
+        formData.password = formData.password.trim();
+        
            if((formData.email === '' || formData.email === null ) || (formData.password === '' || formData.password === null)){
                 changeSpinner(()=>false);
                 return updateErrorText('Email or password cannot be empty');
@@ -31,7 +34,7 @@ export const Login = (props:any) =>{
         updateErrorText('')
         changeSpinner(()=>true);
         console.group(formData);
-        
+
        try{
             const result =  await loginCall(formData);
             changeSpinner(false);
