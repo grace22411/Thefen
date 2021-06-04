@@ -43,12 +43,13 @@ export const Login = (props:any) =>{
                 localStorage.setItem('token',result.data.data.token);
                 return props.history.push('/dashboard');
             }
-        }catch(e){
+        } catch(e){
             changeSpinner(false);
             return updateErrorText('User does not exist');
         }
     }
 
+    
     return (
         <div className='login-container'>
             <div className='login-home-container'>
