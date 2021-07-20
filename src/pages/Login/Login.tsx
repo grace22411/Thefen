@@ -30,7 +30,7 @@ export const Login = (props:any) =>{
             
     }
 
-    const loginMethod = async() =>{
+    const loginMethod = async() => {
         updateErrorText('')
         changeSpinner(()=>true);
         console.group(formData);

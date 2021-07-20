@@ -1,5 +1,4 @@
-import {login,header} from '../../services';
-import axios,{AxiosResponse,AxiosRequestConfig} from 'axios';
+import http, {login} from '../../services';
 
 
- export const loginCall = (params:any) => axios.post(login,params,header);
+ export const loginCall = (params:any) => http.post(login, params);
