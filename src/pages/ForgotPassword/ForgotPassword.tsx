@@ -10,7 +10,7 @@ import {ForgotPasswordCall} from './ForgotService'
 export const ForgotPassword = (dispatch:any) => {
     const [formData,updateValues] = useState<any>({email:''});
     const [spinner,changeSpinner] = useState(false);
-    const [errorText,updateErrorText]  = useState('');
+    // const [errorText,updateErrorText]  = useState('');
 
     const handleInputChange = (e:any) => {
         const {name, value} = e.target

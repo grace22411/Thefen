@@ -6,7 +6,7 @@ import {Colors} from '../../styles';
 import {CustomButton,FlexContainer, Header3, ParagraphText} from '../../styles';
 import './login.scss';
 import {loginCall} from './LoginService'
-import * as jwt from "jsonwebtoken"
+//import * as jwt from "jsonwebtoken"
 
 
 export const Login = (props:any) =>{
@@ -19,15 +19,15 @@ export const Login = (props:any) =>{
         updateValues({...formData, [name]: value})
     }
 
-    const jwtConfig = {
-        secret: "PPRvE7CrIqzCnEYLF6InNv7ADrNqCzjInAQYLH9JxSIsWYdcjSnQYTL6nEu0MIES"
-    }
-function getUserFromLocalStorage(token:any) {
-    // const token =  localStorage.getItem("user");
-    const secret = jwtConfig.secret;
-    let user = jwt.verify(token, secret)
-    return user;
-}
+    // const jwtConfig = {
+    //     secret: "PPRvE7CrIqzCnEYLF6InNv7ADrNqCzjInAQYLH9JxSIsWYdcjSnQYTL6nEu0MIES"
+    // }
+// function getUserFromLocalStorage(token:any) {
+//     // const token =  localStorage.getItem("user");
+//     const secret = jwtConfig.secret;
+//     let user = jwt.verify(token, secret)
+//     return user;
+// }
 
 
     const validate = () =>{

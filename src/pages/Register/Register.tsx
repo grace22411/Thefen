@@ -34,7 +34,7 @@ export const Register = (props: any) => {
     updateErrorText('')
     //console.group(formData);
     changeSpinner(() => true);
-    const { history } = props;
+    //const { history } = props;
     if (password.length < 8) {
       return updateErrorText(
         "Password should be minimum of 8 characters"

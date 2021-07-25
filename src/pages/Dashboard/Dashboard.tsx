@@ -26,9 +26,9 @@ export const Dashboard  = () => {
         updateItemList(()=>[...formCopy])
     }
 
-    const updateItemForm = () =>{
-        updateLength(formLength => [...formLength, formLength.length + 1])
-    }
+    // const updateItemForm = () =>{
+    //     updateLength(formLength => [...formLength, formLength.length + 1])
+    // }
     
     const removeIndex = (i:any) =>{
         const item  = formLength.indexOf(i);
