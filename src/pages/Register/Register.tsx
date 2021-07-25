@@ -24,14 +24,13 @@ export const Register = (props: any) => {
   const [spinner, changeSpinner] = useState(false);
   const [errorText, updateErrorText] = useState("");
 
-  const {name, email, password, phoneNumber} = formData;
+  const {name, email, password, passwordConfirm, phoneNumber} = formData;
   //onchange
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     updateValues({ ...formData, [name]: value });
-    console.log(formData);
   };
-  const signUpMethod = async () => {
+  const signUpMethod = async() => {
     updateErrorText('')
     //console.group(formData);
     changeSpinner(() => true);
@@ -41,15 +40,20 @@ export const Register = (props: any) => {
         "Password should be minimum of 8 characters"
       );
     }
+    if (password !== passwordConfirm) {
+      return updateErrorText(
+        "Password do not match"
+      );
+    }
     try {
       const result = await registerCall(formData);
       if (result.status === 200) {
-        console.log(result.data);
-        return props.history.push('/dashboard');
+
+        //logPage.redirect("/dashboard")
+        return props.history.push('/verifyEmail');
       }
       changeSpinner(false);
     } catch (e) {
-      console.log(e);
       changeSpinner(false);
     }
   };
@@ -93,30 +97,35 @@ export const Register = (props: any) => {
                   handleChange={handleInputChange}
                   labelText="Full Name"
                   inputType="text"
+                  inputValue={name}
                 />
                 <InputBox
                   inputName="email"
                   handleChange={handleInputChange}
                   labelText="Email"
                   inputType="text"
+                  inputValue={email}
                 />
                 <InputBox
                   inputName="phoneNumber"
                   handleChange={handleInputChange}
                   labelText="Phone Number"
                   inputType="text"
+                  inputValue={phoneNumber}
                 />
                 <InputBox
                   inputName="password"
                   handleChange={handleInputChange}
                   labelText="Password"
                   inputType="password"
+                  inputValue={password}
                 />
                 <InputBox
                   inputName="passwordConfirm"
                   handleChange={handleInputChange}
                   labelText="Confirm Password"
                   inputType="password"
+                  inputValue={passwordConfirm}
                 />
                 <div className="register-remember-me">
                   <input type="checkbox" />
@@ -133,10 +142,10 @@ export const Register = (props: any) => {
                 <ParagraphText textAlign='center' fontColor={Colors.redColor}>{errorText}</ParagraphText>
               </div>
               <div className="create-account">
-                <p>
+              <Link to='/login'><p>
                   Already have an account?{" "}
                   <span className="create-text">Login</span>
-                </p>
+                </p></Link>
               </div>
             </FlexContainer>
           </div>

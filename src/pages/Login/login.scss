@@ -64,7 +64,7 @@
 
 .login-content{
     background-color: #fff;
-    padding: 40px 20px;
+    padding: 40px;
 
     @include mobile-phones{
         padding:15px;
@@ -105,10 +105,11 @@
 .remember-me{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;;
     & p{
         color: #1032A0;
-        font-weight: 500;
-        margin-top: 5px;
+        font-weight: 600;
+        margin-top: -5px;
         flex:1;
     }
     & .input-box{

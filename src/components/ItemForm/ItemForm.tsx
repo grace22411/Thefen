@@ -48,7 +48,7 @@ export const ItemForm = ({removeIndex,index,itemLength,data,handleChange}:ItemPr
             <div className='input-group input-group-flex'>
                 <div className ='input-group-div flex-1'>
                     <span>Should in case our predefined info area doesnt meet your product description, please give a clear description of the item.</span>
-                    <div className='input-box'><textarea rows="5"></textarea></div>
+                    <div className='input-box'><textarea ></textarea></div>
                 </div>
             </div>
 

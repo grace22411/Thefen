@@ -1,10 +1,12 @@
 import React,{useState} from 'react';
 import { Home } from '../Home/Home';
+import {Link} from "react-router-dom"
 import  {InputBox,Spinner} from '../../components';
 import {Colors} from '../../styles';
 import {CustomButton,FlexContainer, Header3, ParagraphText} from '../../styles';
 import './login.scss';
 import {loginCall} from './LoginService'
+import * as jwt from "jsonwebtoken"
 
 
 export const Login = (props:any) =>{
@@ -16,6 +18,17 @@ export const Login = (props:any) =>{
         const {name, value} = e.target
         updateValues({...formData, [name]: value})
     }
+
+    const jwtConfig = {
+        secret: "PPRvE7CrIqzCnEYLF6InNv7ADrNqCzjInAQYLH9JxSIsWYdcjSnQYTL6nEu0MIES"
+    }
+function getUserFromLocalStorage(token:any) {
+    // const token =  localStorage.getItem("user");
+    const secret = jwtConfig.secret;
+    let user = jwt.verify(token, secret)
+    return user;
+}
+
 
     const validate = () =>{
         changeSpinner(()=>true);
@@ -38,9 +51,10 @@ export const Login = (props:any) =>{
        try{
             const result =  await loginCall(formData);
             changeSpinner(false);
-
+            
             if(result.status === 200){
-                localStorage.setItem('token',result.data.data.token);
+                //const user = getUserFromLocalStorage(result.data.data.token);
+                localStorage.setItem('user',result.data.data);
                 return props.history.push('/dashboard');
             }
         } catch(e){
@@ -66,14 +80,16 @@ export const Login = (props:any) =>{
                             <InputBox handleChange={handleInputChange} inputName='email' labelText='Email' inputType='text'/>
                             <InputBox handleChange={handleInputChange}  inputName='password' labelText='Password' inputType='password'/>
                             <div className='remember-me'>
-                            </div>
+                                {/* <input type='checkbox' className="input-box"/> Remember me */}
+                                <Link to='/forgotpassword'> <p>Forgot Password? </p></Link>
+                            </div>  
                        </div>
                        <div className='login-content-button login-content-div'>
                             <CustomButton onClick={validate} bgColor={Colors.blueColor}>Login<Spinner start={spinner}/></CustomButton>
                             <ParagraphText textAlign='center' fontColor={Colors.redColor}>{errorText}</ParagraphText>
                        </div>
                        <div className='create-account'>
-                           <p>Don't have an account? <span className='create-text'>Create one</span></p>
+                          <Link to='/register'> <p>Don't have an account? <span className='create-text'>Create one</span></p></Link>
                        </div>
                    </FlexContainer>
                 </div>

@@ -3,6 +3,8 @@ import { Colors, CustomButton, FlexContainer, Header3 } from '../../styles';
 import {Logo,PageBox,ItemForm,CountryList} from '../../components';
 import './dashboard.scss';
 import {notification,logout,plus} from '../../images'
+//import {useHistory} from "react-router-dom";
+//import { useDispatch } from "react-redux";
 
 
 export const Dashboard  = () => {
@@ -22,7 +24,6 @@ export const Dashboard  = () => {
         const formCopy = itemList; 
         formCopy.push(itemInfo);
         updateItemList(()=>[...formCopy])
-        console.log('updated list', itemList)
     }
 
     const updateItemForm = () =>{
@@ -38,6 +39,14 @@ export const Dashboard  = () => {
     const updateChange = (e:any)=>{
      
     }
+
+//     const history = useHistory();
+//   const dispatch = useDispatch()
+//   const logOut = () => {
+//     history.push('/');
+//     dispatch(logoutService());
+//   };
+
     return (
         <div className=' container dashboard-container'> 
             <div className='dashboard-content'>
@@ -66,7 +75,7 @@ export const Dashboard  = () => {
                                     <Header3 color={Colors.blueColor}>URL</Header3>
                                 </div>
                                 <div className='url-form'>
-                                    {itemList  && itemList.map((i,index)=> <ItemForm removeIndex={removeIndex} index={i}  itemLength ={itemList.length} data={itemList} handleChange ={updateChange} />)}
+                                    {itemList  && itemList.map((i,index)=> <ItemForm removeIndex={removeIndex} index={index}  itemLength ={itemList.length} data={itemList} handleChange ={updateChange} />)}
                                     
                                     <div className='add-button-container'>
                                         <CustomButton bgColor={Colors.blueColor} borderRadius='10px'>Send</CustomButton>
