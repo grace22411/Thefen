@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {Navbar,List,ImageList} from '../../components';
 import {Link} from 'react-router-dom';
 import {CustomButton,FlexContainer, Header3, ParagraphText,Image} from '../../styles';
@@ -6,7 +6,16 @@ import {Colors} from '../../styles/colors';
 import {pattern,brandimage,groupimg,laptopsurf,payment,website_shop} from '../../images';
 import './home.scss';
 
-export const Home = () => 
+export const Home = (props:any) => {
+
+    useEffect(() => {
+        const isAuthenticated = localStorage.getItem('token');
+        if(isAuthenticated){
+            return props.history.push('/dashboard');
+        }
+        
+    }, )
+return(
 <div className='page-container'>    
     <Navbar/>
     <FlexContainer background={Colors.blueColor}  className='large-wrapper'>
@@ -110,3 +119,5 @@ export const Home = () =>
         <ParagraphText>© 2021 Northsnow. All rights reserved</ParagraphText>
     </footer>
 </div>
+)
+}

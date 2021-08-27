@@ -48,4 +48,11 @@ export const updatepassword = `${baseUrl}/auth/changepassword`;
 export const addstore = `${baseUrl}/store`;
 export const getAllStore = `${baseUrl}/store`;
 
+
+//get categories
+
+export const getCategory= `${baseUrl}/category`
+//initiaite request
+export const initiateRequest = `${baseUrl}/request`
+
 export default http;

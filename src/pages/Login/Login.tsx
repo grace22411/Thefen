@@ -54,7 +54,10 @@ export const Login = (props:any) =>{
             
             if(result.status === 200){
                 //const user = getUserFromLocalStorage(result.data.data.token);
-                localStorage.setItem('user',result.data.data);
+                console.log(result.data.data);
+                localStorage.setItem('user',JSON.stringify(result.data.data));
+                localStorage.setItem('token',JSON.stringify(result.data.data.token));
+               
                 return props.history.push('/dashboard');
             }
         } catch(e){

@@ -30,6 +30,7 @@ export const Register = (props: any) => {
     const { name, value } = e.target;
     updateValues({ ...formData, [name]: value });
   };
+  
   const signUpMethod = async() => {
     updateErrorText('')
     //console.group(formData);
@@ -51,6 +52,9 @@ export const Register = (props: any) => {
 
         //logPage.redirect("/dashboard")
         return props.history.push('/verifyEmail');
+      }
+      else{
+        console.log(result);
       }
       changeSpinner(false);
     } catch (e) {

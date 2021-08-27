@@ -3,24 +3,45 @@ import { Colors, CustomButton, Header3, ParagraphText } from '../../styles';
 
 
 type ItemProp = {
-  index: number
-  data:any,
+  clothId:string,
+  shoeId:string,
+  index: number,
+  item?:any,
   itemLength:number,
+  categories?:any,
   handleChange:(e:any)=>void,
-  removeIndex:(e:any)=>void
+  removeIndex:(i:any)=>void
 }
 
-export const ItemForm = ({removeIndex,index,itemLength,data,handleChange}:ItemProp) => {
+export const ItemForm = ({removeIndex,handleChange,item,itemLength,index,categories,clothId,shoeId}:ItemProp) => {
+    
+    const range100 = Array.from(Array(100).keys());
+
+    //range of values
+    const valueRange = (start:any, end:any): any => {
+        if(start === end) return [start];
+        return [start, ...valueRange(start + 1, end)];
+    }
+
+    
+    
+    // const shoeId = getObj("Shoes")[0]._id;
+    // const clothId= getObj("Clothings")[0]._id;
+
+    // console.log(shoeId,'and',clothId);
+
+    
+
     return (
         <div className='url-form-section'>
             <div className='input-group input-group-flex'>
                 <div className='input-group-div flex-3'>
                     <label>Shopping URL <span>*</span> </label>
-                    <div className='input-box'><input onChange={handleChange} name={data?.url} /></div>
+                    <div className='input-box'><input data-index={index} onChange={handleChange} name='shoppingUrl' /></div>
                 </div>
                 <div className=' input-group-div flex-1'>
                     <label>Price <span>*</span> </label>
-                    <div className='input-box'><input/></div>
+                    <div className='input-box'><input data-index={index} name='value' onChange={handleChange} /></div>
                 </div>
             </div>
             <div className='additional-info'>
@@ -30,34 +51,78 @@ export const ItemForm = ({removeIndex,index,itemLength,data,handleChange}:ItemPr
             <div className='input-group input-group-flex'>
                 <div className='input-group-div flex-1'>
                     <label>Category <span>*</span> </label>
-                    <div className='input-box'><select></select></div>
+                    <div className='input-box'>
+                        <select onChange={handleChange} name='category' data-index={index}>
+                            <option value="" selected disabled hidden>Choose here</option>
+                            {categories && categories.map((item:any)=>
+                               
+                                <option value={item?._id}>{item?.name} </option>
+                             )}
+                        </select>
+                    </div>
                 </div>
+
                 <div className='input-group-div flex-1'>
                     <label>Quantity <span>*</span> </label>
-                    <div className='input-box'><select></select></div>
+                    <div className='input-box'>
+                        <select onChange={handleChange} name='quantity' data-index={index}>
+                        <option value="" selected disabled>Choose here</option>
+                            {
+                                range100 && range100.map((i,index)=>
+                                    <option value={i}> {i}</option>
+                                )
+                            }
+                        </select>
+                    </div>
                 </div>
-                <div className='input-group-div flex-1'>
-                    <label>Size <span>*</span> </label>
-                    <div className='input-box'><input/></div>
-                </div>
+                
+                {item && item.category === shoeId &&
+                    <div className='input-group-div flex-1'>
+                        <label>Size <span>*</span> </label>
+                        <div className='input-box'>
+                            <select onChange={handleChange} name='size' data-index={index}>
+                                { valueRange(30,45).map((i:any,index:any)=>
+                                    <option value={i}>{i}</option>
+                                ) }
+                            </select>
+                        </div>
+                    </div>
+                }
+                {item && item.category === clothId &&
+                    <div className='input-group-div flex-1'>
+                        <label>Size <span>*</span> </label>
+                        <div className='input-box'>
+                            <select onChange={handleChange} name='size' data-index={index}>
+                                <option value='small'>small</option>
+                                <option value='medium'>medium</option>
+                                <option value='large'>large</option>
+                                <option value='xl'>xl</option>
+                                <option value='xxl'>xxl</option>
+                            </select>
+                        </div>
+                    </div>
+                }
                 <div className='input-group-div flex-1'>
                     <label>Color <span>*</span> </label>
-                    <div className='input-box'><input/></div>
+                    <div className='input-box'><input onChange={handleChange} data-index={index}  name='color'/></div>
                 </div>
             </div>
             <div className='input-group input-group-flex'>
                 <div className ='input-group-div flex-1'>
-                    <span>Should in case our predefined info area doesnt meet your product description, please give a clear description of the item.</span>
-                    <div className='input-box'><textarea ></textarea></div>
+                    <span>Should in case our predefined info area doesn't meet your product description, please give a clear description of the item.</span>
+                    <div className='input-box'><textarea data-index={index} name='description' ></textarea></div>
                 </div>
             </div>
 
-            { itemLength > 1 && 
+            {itemLength >= 1 && 
+
             <div className='input-group input-group-flex'>
                 <div className ='input-group-div flex-1'>
-                   <CustomButton onClick={()=>removeIndex(index)} borderRadius='4px' fontColor={Colors.blueColor} width='120' className='remove-btn'>Remove URL</CustomButton>
+                   <CustomButton borderRadius='4px' onClick={()=>removeIndex(index)} fontColor={Colors.blueColor} width='120' className='remove-btn'>Remove URL</CustomButton>
                 </div>
-            </div> }
+            </div> 
+            }
         </div>
+            
     )
 }
