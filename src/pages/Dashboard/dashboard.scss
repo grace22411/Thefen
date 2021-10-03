@@ -85,19 +85,30 @@
     border-radius: 6px;
     margin-bottom: 20px;
     padding-bottom: 20px;
+    .ant-table{
+        overflow-x: auto;
+    }
     table {
         border-spacing: 0px 5px !important;
         background-color: transparent !important;
+        overflow-x: auto;
         .ant-table-thead {
           tr {
             th {
               background-color: #162A5610;
-              font-size: 0.9em;
+              font-size: 0.75em;
               font-weight: 600;
               color: #162A56;
             }
           }
         }
+        .ant-table-tbody{
+            .ant-table-row {
+              .ant-table-cell{
+                font-size: 10px !important;
+              }
+            }
+          }
       }
     
     button{

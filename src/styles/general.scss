@@ -23,6 +23,20 @@ select,textarea{
     &-flex{
         display: flex;
     }
+    @media only screen and (max-width:600px){
+        display: block;
+        flex-direction: column;
+        width:88% !important;
+    }
+    
+}
+
+.input-group-div{
+    @media only screen and (max-width:600px){
+        display: block;
+        flex-direction: column;
+        width:100% !important;
+    }
 }
 .input-box{
     margin-top: 10px;
@@ -36,6 +50,9 @@ select,textarea{
         padding:15px;
         border-radius: 12px;
         box-sizing: border-box;
+    }
+    @media only screen and (max-width:600px){
+        width:100%;
     }
 }
 
