@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+.ant-modal-content{
+    border-radius: 10px;;
+    font-family: 'Nunito', sans-serif;
+    .ant-modal-body{
+        text-align: center;
+        padding:50px;
+        h3{
+            color:rgba(16, 50, 160, 1);
+            font-size:28px;
+            font-weight: 700;
+        }
+        p{
+            color: #515B7B;
+            b{
+                color:rgba(16, 50, 160, 1);
+            }
+        }
+        img{
+            width:100px;
+        }
+    }
+}
+
+.ant-modal-footer{
+    display: none;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Colors, CustomButton, Header3, ParagraphText } from '../../styles';
+import "./itemform.scss"
 
 
 type ItemProp = {
@@ -13,7 +14,7 @@ type ItemProp = {
   removeIndex:(i:any)=>void
 }
 
-export const ItemForm = ({removeIndex,handleChange,item,itemLength,index,categories,clothId,shoeId}:ItemProp) => {
+export const ItemForm = ({removeIndex,handleChange,itemLength,index,categories}:ItemProp) => {
     
     const range100 = Array.from(Array(100).keys());
 
@@ -23,7 +24,7 @@ export const ItemForm = ({removeIndex,handleChange,item,itemLength,index,categor
         return [start, ...valueRange(start + 1, end)];
     }
 
-    
+    console.log(categories)
     
     // const shoeId = getObj("Shoes")[0]._id;
     // const clothId= getObj("Clothings")[0]._id;
@@ -41,7 +42,7 @@ export const ItemForm = ({removeIndex,handleChange,item,itemLength,index,categor
                 </div>
                 <div className=' input-group-div flex-1'>
                     <label>Price <span>*</span> </label>
-                    <div className='input-box'><input data-index={index} name='value' onChange={handleChange} /></div>
+                    <div className='input-box price'><input data-index={index} name='value' type="number" onChange={handleChange} /><p>$</p></div>
                 </div>
             </div>
             <div className='additional-info'>
@@ -76,7 +77,7 @@ export const ItemForm = ({removeIndex,handleChange,item,itemLength,index,categor
                     </div>
                 </div>
                 
-                {item && item.category === shoeId &&
+                {/* {item && item.category === shoeId &&
                     <div className='input-group-div flex-1'>
                         <label>Size <span>*</span> </label>
                         <div className='input-box'>
@@ -87,8 +88,7 @@ export const ItemForm = ({removeIndex,handleChange,item,itemLength,index,categor
                             </select>
                         </div>
                     </div>
-                }
-                {item && item.category === clothId &&
+                } */}
                     <div className='input-group-div flex-1'>
                         <label>Size <span>*</span> </label>
                         <div className='input-box'>
@@ -101,7 +101,7 @@ export const ItemForm = ({removeIndex,handleChange,item,itemLength,index,categor
                             </select>
                         </div>
                     </div>
-                }
+                
                 <div className='input-group-div flex-1'>
                     <label>Color <span>*</span> </label>
                     <div className='input-box'><input onChange={handleChange} data-index={index}  name='color'/></div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import {Home,Login,ForgotPassword,NewPassword,Register,Dashboard,VerifyEmail} from './pages'
+import {Home,Login,ForgotPassword,NewPassword,Register,Dashboard,VerifyEmail, PaymentValidation} from './pages'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 import {PrivateRoute} from './components/Private/PrivateRoute'
+import Address from './pages/Address/Address';
+import ChangePassword from './pages/ChangePassword/ChangePassword';
 
 
 const routing = (
@@ -17,6 +19,10 @@ const routing = (
         <Route path='/verifyEmail' component={VerifyEmail}/> 
         <Route path='/register' component={Register}/> 
         <PrivateRoute path='/dashboard' component={Dashboard}/> 
+        <PrivateRoute path='/address' component={Address}/> 
+        <PrivateRoute path='/changepassword' component={ChangePassword}/> 
+        <PrivateRoute path='/paymentvalidation' component={PaymentValidation}/> 
+        
       </Switch>
   </Router>
 )

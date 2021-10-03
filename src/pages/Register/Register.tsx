@@ -92,7 +92,7 @@ export const Register = (props: any) => {
                   className="login-welcome-title"
                   color={Colors.blueColor}
                 >
-                  Hi, Welcome back!{" "}
+                 Let’s get you started!{" "}
                 </Header3>
               </div>
               <div className="login-form-display login-content-form login-content-div register-form-display">

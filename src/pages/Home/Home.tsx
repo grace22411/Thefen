@@ -8,13 +8,13 @@ import './home.scss';
 
 export const Home = (props:any) => {
 
-    useEffect(() => {
-        const isAuthenticated = localStorage.getItem('token');
-        if(isAuthenticated){
-            return props.history.push('/dashboard');
-        }
+    // useEffect(() => {
+    //     const isAuthenticated = localStorage.getItem('token');
+    //     if(isAuthenticated){
+    //         return props.history.push('/dashboard');
+    //     }
         
-    }, )
+    // }, )
 return(
 <div className='page-container'>    
     <Navbar/>
