@@ -24,7 +24,6 @@ export const ItemForm = ({removeIndex,handleChange,itemLength,index,categories}:
         return [start, ...valueRange(start + 1, end)];
     }
 
-    console.log(categories)
     
     // const shoeId = getObj("Shoes")[0]._id;
     // const clothId= getObj("Clothings")[0]._id;

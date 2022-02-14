@@ -6,10 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 import {PrivateRoute} from './components/Private/PrivateRoute'
 import Address from './pages/Address/Address';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ChangePassword from './pages/ChangePassword/ChangePassword';
 
 
 const routing = (
+  
   <Router>
      <Switch>
         <Route exact path="/" component = {Home}/> 

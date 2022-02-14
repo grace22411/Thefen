@@ -1,7 +1,24 @@
 @import '../../styles/responsive.scss';
 
 .nav-button-container{
-    @include mobile-phones{
-        display: none !important;
+    .nav-bar{
+        display: none;
     }
+    @include mobile-phones{
+        .btn-container{
+            display: none;
+        }
+        .nav-bar{
+            display:block;
+            color:#000;
+            font-size:20px;
+        }
+    }
+}
+
+.width-reduce{
+    @include mobile-phones{
+        padding:20px 30px !important;
+    }
+    
 }

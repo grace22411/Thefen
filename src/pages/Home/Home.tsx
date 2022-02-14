@@ -22,8 +22,7 @@ return(
         <div className='align-div'>
            <div className='flex-div'>
                 <div className='header-text'>
-                    <Header3 fontSize="4.8rem">We Shop for you,</Header3>
-                    <Header3 fontSize='4.8rem'>and Deliver to you,</Header3>
+                    <Header3 fontSize="4.8rem"  weight="700" style={{marginBottom:"0px", lineHeight:"1.2em"}}>We Shop for you, <br />and Deliver to you,</Header3>
                     <div className='header-image-container'>
                         <Image  width="40%" position='absolute' src={pattern}/>
                     </div>
@@ -38,8 +37,8 @@ return(
            
             <div className='button-container'>
                 <Link to='/register'>
-                    <CustomButton width='140' className='font-noto'  bgColor={Colors.redColor}>
-                    Get Started
+                    <CustomButton style={{boxShadow:"inset 0px 8px 12px #EC4D60"}} width='140' className='font-noto'  bgColor={Colors.redColor}>
+                    Get Started <i className="fas fa-arrow-right" style={{marginLeft:"12px", fontSize:"18px", }}></i>
                     </CustomButton>
                 </Link>
             </div>
@@ -53,7 +52,7 @@ return(
     </FlexContainer>
 
     <div className='how-we-work' style={{background:Colors.tealColor2}} >
-        <Header3 className='how-we-work-header-text' color={Colors.darkColor}>How it Works <hr/></Header3>
+        <Header3 className='how-we-work-header-text' color={Colors.darkColor} fontSize="3em">How it Works <hr/></Header3>
         <FlexContainer className='flex-width'>
            <div className='image-container group-image'>
                <Image width="55%" src={groupimg}/>
@@ -81,7 +80,7 @@ return(
     </div>
 
     <div className='faq'>
-        <Header3 className='how-we-work-header-text' color={Colors.darkColor}>FAQ</Header3> 
+        <Header3 className='how-we-work-header-text' color={Colors.darkColor} fontSize="3em">FAQ</Header3> 
         <FlexContainer className='faq-list'>
             <ImageList headerText='What is Northsnow?' contentText={['It’s an end to end online assisted shopping and shipping service platform for overseas online and offline stores ']}/>
             <ImageList headerText='Who can use Northsnow services?' contentText={['Anyone that is interested in buying online, but needs premium assisted shopping and shipping services ']}/>
@@ -113,7 +112,7 @@ return(
         </FlexContainer>
     </div>
     <div className='contact-section'>
-        <Header3 color={Colors.yellowColor}>For Inquiries please contact - 08129323423 </Header3>
+        <Header3 color={Colors.yellowColor}  fontSize="2em"  weight="700">For Inquiries please contact - 08129323423 </Header3>
     </div>
     <footer className='footer-section'>
         <ParagraphText>© 2021 Northsnow. All rights reserved</ParagraphText>

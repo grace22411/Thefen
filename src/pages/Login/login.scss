@@ -5,7 +5,8 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: black
+    background-color: black;
+    overflow: hidden;
 }
 
 
@@ -35,8 +36,9 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,0.5);
     z-index: 78867897;
+    backdrop-filter: blur(10px);;
     @include mobile-phones{
     }
 }
@@ -113,13 +115,13 @@
         flex:1;
     }
     & .input-box{
-        flex-direction: row-reverse;
-       justify-content: center;
-       align-items: center;
+       // flex-direction: row-reverse;
+       //justify-content: center;
+       //align-items: center;
        & label{
-           padding-right: 10px;
-           display: flex;
-           position: relative;
+           //padding-right: 10px;
+           //display: flex;
+           //position: relative;
          
            top:4px;
            border: 1px solid red;
@@ -143,6 +145,10 @@
 
 .create-account{
     text-align: center;
+    p{
+        color:#000;
+        font-size:15px;
+    }
     & .create-text{
         color: #EA6215;
         font-weight: 600;

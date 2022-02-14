@@ -14,7 +14,7 @@ export const PageBox = () => {
                 <div className='profile-box-section-1'>
                     <div className=''><img src={profile} alt='profile icon'/></div>
                     <div className='profile-text'>
-                        <h3>{getUser.result.name}</h3>
+                        <h3 style={{color:"#fff"}}>{getUser.result.name}</h3>
                         <p>Edit Profile</p>
                     </div>
                 </div>

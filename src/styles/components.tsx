@@ -18,6 +18,7 @@ type textProps = {
     textAlign?:string,
     fontColor?:string,
     weight?:string
+
 }
 
 export const InputBox = styled.input ``;
@@ -54,6 +55,8 @@ export const Header3 = styled.h3<textProps>`
     font-size:${(props:any)=>props.fontSize || '1.4rem'};
     color:${(props)=>props.color || Colors.whiteColor};
     text-align:${(props)=>props.textAlign};
+    font-weight:${(props)=>props.weight};
+
 
     @media (max-width:1000px){
         font-size:2.64rem

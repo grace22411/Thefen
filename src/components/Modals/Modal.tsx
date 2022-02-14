@@ -4,7 +4,7 @@ import "./Modal.scss";
 import mail from "../../images/checkmail.png";
 
 const CheckEmail = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(true);
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -20,8 +20,8 @@ const CheckEmail = () => {
 
   return (
     <>
-      <button onClick={showModal}>Open Modal</button>
-      <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+     
+      <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} showModal={showModal}>
         <img src={mail} alt="" />
         <h3>Check Your Mail</h3>
         <p>

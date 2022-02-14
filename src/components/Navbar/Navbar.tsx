@@ -11,6 +11,9 @@ export default function Navbar() {
        <FlexContainer className='width-reduce' flexDirection='row' justify='space-between'>
            <Logo/>
            <FlexContainer className='nav-button-container'>
+               <div className='nav-bar'>
+               <i className="far fa-bars"></i>
+               </div>
               <div className='btn-container'>
                   <Link to="/login"><CustomButton borderRadius="100px" bgColor={Colors.blueColor}>Log in</CustomButton></Link>
                </div>

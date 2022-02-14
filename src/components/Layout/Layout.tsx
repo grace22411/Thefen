@@ -16,7 +16,7 @@ export default function Layout(props:any) {
 
     const history = useHistory();
   const logOut = () => {
-    history.push('/');
+    history.push('/login');
     localStorage.removeItem("token");
       localStorage.removeItem("user");
   };
@@ -28,10 +28,10 @@ export default function Layout(props:any) {
             <Logo />
             <div className="menu-option">
               <div className="icon-div">
-                <img src={notification} alt="notification" />
+                <img style={{cursor:"pointer"}} src={notification} alt="notification" />
               </div>
               <div className="icon-div">
-                <img src={logout} alt="logout"  onClick={logOut}/>
+                <img style={{cursor:"pointer"}} src={logout} alt="logout"  onClick={logOut}/>
               </div>
             </div>
           </FlexContainer>

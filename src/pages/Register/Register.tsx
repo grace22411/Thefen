@@ -91,6 +91,7 @@ export const Register = (props: any) => {
                   fontSize="2.3rem"
                   className="login-welcome-title"
                   color={Colors.blueColor}
+                  weight="700"
                 >
                  Let’s get you started!{" "}
                 </Header3>
@@ -124,13 +125,13 @@ export const Register = (props: any) => {
                   inputType="password"
                   inputValue={password}
                 />
-                <InputBox
+                {/* <InputBox
                   inputName="passwordConfirm"
                   handleChange={handleInputChange}
                   labelText="Confirm Password"
                   inputType="password"
                   inputValue={passwordConfirm}
-                />
+                /> */}
                 <div className="register-remember-me">
                   <input type="checkbox" />
                   <label>
