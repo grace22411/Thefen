@@ -10,4 +10,4 @@ const auth = {
 
 export const itemCall = (params:any)=> http.post(addstore, params);
 export const makeRequest = (params:any)=> http.post(initiateRequest, params,auth);
-export const  categoryList  = () =>http.get(getCategory, auth)//
+export const  categoryList  = () =>http.get(getCategory, auth)

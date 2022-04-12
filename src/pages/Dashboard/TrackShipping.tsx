@@ -29,7 +29,7 @@ const TrackShipping: React.FC = () => {
             <p>WR11765329</p>
         </div>
 
-        <p className="footer">Having issues? <span>please call - 09034232323</span></p>
+        <p className="footer">Having issues? <span>Please call - +447495052289</span></p>
       </Drawer>
     </>
   );

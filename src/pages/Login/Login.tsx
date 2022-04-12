@@ -10,6 +10,7 @@ import {
   ParagraphText,
 } from "../../styles";
 import "./login.scss";
+import axios from "axios";
 import { loginCall } from "./LoginService";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -60,12 +61,22 @@ export const Login = (props: any) => {
         console.log(result.data.data);
         localStorage.setItem("user", JSON.stringify(result.data.data));
         localStorage.setItem("token", JSON.stringify(result.data.data.token));
-
+        setAuthToken(result.data.data.token)
         return props.history.push("/dashboard");
       }
     } catch (e) {
       changeSpinner(false);
       return updateErrorText("User does not exist");
+    }
+  };
+
+const setAuthToken = (token: any) => {
+    if (token) {
+      axios.defaults.headers.common['x-access-token'] = token;
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+      //axios.defaults.baseURL = API + '';
+    } else {
+      delete axios.defaults.headers.common['x-access-token'];
     }
   };
 

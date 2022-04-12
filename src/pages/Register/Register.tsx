@@ -75,7 +75,7 @@ export const Register = (props: any) => {
                 fontSize="1.6rem"
                 className="intro-text-header"
               >
-                Welcome to NorthSnow{" "}
+                Welcome to Therfen{" "}
               </Header3>
               <ParagraphText className="intro-text-p">
                 Start shopping and shipping from overseas by creating your
@@ -125,13 +125,13 @@ export const Register = (props: any) => {
                   inputType="password"
                   inputValue={password}
                 />
-                {/* <InputBox
+                <InputBox
                   inputName="passwordConfirm"
                   handleChange={handleInputChange}
                   labelText="Confirm Password"
                   inputType="password"
                   inputValue={passwordConfirm}
-                /> */}
+                />
                 <div className="register-remember-me">
                   <input type="checkbox" />
                   <label>

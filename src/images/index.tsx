@@ -12,7 +12,8 @@ import logout from './logout.png';
 import profile from './profile.png';
 import mask from './mask-group.png';
 import plus from './plus.svg';
+import search from "./Vector.png"
 
 export  {
-    brandimage,flyover,groupimg,mask,logo,pattern,plus,flower,laptopsurf,notification,logout,payment,profile,website_shop
+    brandimage,flyover,groupimg,mask,logo,pattern,plus,flower,laptopsurf,notification,logout,payment,profile,website_shop,search
 }

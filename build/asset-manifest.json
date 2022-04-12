@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.2a383fba.chunk.css",
-    "main.js": "/static/js/main.7f4822bb.chunk.js",
-    "main.js.map": "/static/js/main.7f4822bb.chunk.js.map",
+    "main.js": "/static/js/main.4ba1d681.chunk.js",
+    "main.js.map": "/static/js/main.4ba1d681.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7f1a9fce.js",
     "runtime-main.js.map": "/static/js/runtime-main.7f1a9fce.js.map",
     "static/css/2.070beda0.chunk.css": "/static/css/2.070beda0.chunk.css",
-    "static/js/2.758e229c.chunk.js": "/static/js/2.758e229c.chunk.js",
-    "static/js/2.758e229c.chunk.js.map": "/static/js/2.758e229c.chunk.js.map",
+    "static/js/2.fab2fb01.chunk.js": "/static/js/2.fab2fb01.chunk.js",
+    "static/js/2.fab2fb01.chunk.js.map": "/static/js/2.fab2fb01.chunk.js.map",
     "static/js/3.6dddd556.chunk.js": "/static/js/3.6dddd556.chunk.js",
     "static/js/3.6dddd556.chunk.js.map": "/static/js/3.6dddd556.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.070beda0.chunk.css.map": "/static/css/2.070beda0.chunk.css.map",
     "static/css/main.2a383fba.chunk.css.map": "/static/css/main.2a383fba.chunk.css.map",
-    "static/js/2.758e229c.chunk.js.LICENSE.txt": "/static/js/2.758e229c.chunk.js.LICENSE.txt",
+    "static/js/2.fab2fb01.chunk.js.LICENSE.txt": "/static/js/2.fab2fb01.chunk.js.LICENSE.txt",
     "static/media/brand-picture.6a84bf85.png": "/static/media/brand-picture.6a84bf85.png",
     "static/media/checkmail.ddd41ed6.png": "/static/media/checkmail.ddd41ed6.png",
     "static/media/fly_over.f90cd441.png": "/static/media/fly_over.f90cd441.png",
     "static/media/group-img.247559d4.png": "/static/media/group-img.247559d4.png",
     "static/media/laptop-surf.a48d0ae7.png": "/static/media/laptop-surf.a48d0ae7.png",
+    "static/media/logo-blue.f78d9d6f.svg": "/static/media/logo-blue.f78d9d6f.svg",
     "static/media/mask-group.f60d1c22.png": "/static/media/mask-group.f60d1c22.png",
     "static/media/pattern-bottom.b11b99f8.svg": "/static/media/pattern-bottom.b11b99f8.svg",
     "static/media/payment.00ebd1b2.png": "/static/media/payment.00ebd1b2.png",
@@ -28,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.7f1a9fce.js",
     "static/css/2.070beda0.chunk.css",
-    "static/js/2.758e229c.chunk.js",
+    "static/js/2.fab2fb01.chunk.js",
     "static/css/main.2a383fba.chunk.css",
-    "static/js/main.7f4822bb.chunk.js"
+    "static/js/main.4ba1d681.chunk.js"
   ]
 }
