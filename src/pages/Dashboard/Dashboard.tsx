@@ -4,7 +4,7 @@ import { ItemForm, Spinner } from "../../components";
 import { categoryList } from "./DashboardService";
 import "./dashboard.scss";
 
-import { plus,search } from "../../images";
+import { plus, search } from "../../images";
 import { makeRequest } from "./DashboardService";
 import Layout from "../../components/Layout/Layout";
 import ShoppingInfo from "./ShoppingInfo";
@@ -22,8 +22,6 @@ export default function Dashboard(props: any) {
   const [filteredShipping, setFilteredShipping] = useState([]);
   const [spinner, changeSpinner] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
-
- 
 
   const handleCancel = () => {
     setIsModalVisible(false);
@@ -106,8 +104,7 @@ export default function Dashboard(props: any) {
       if (result.status === 201) {
         toast(result.data.message);
         setIsModalVisible(true);
-      } else{
-
+      } else {
       }
       // if(result.status === 400){
       //   toast(result.data.message);
@@ -177,25 +174,26 @@ export default function Dashboard(props: any) {
       </div>
       <div className="shipping-info">
         <div className="url-header">
-          <Header3 color={Colors.blueColor} style={{fontWeight:"bold"}}>Shipping Info</Header3>
+          <Header3 color={Colors.blueColor} style={{ fontWeight: "bold" }}>
+            Shipping Info
+          </Header3>
         </div>
         <div className="filter">
-              <div className="filter-by">
-                <p>Filter by: </p>
-                <select>
-                  <option>All</option>
-                  <option>Store</option>
-                  <option>Date</option>
-                </select>
-              </div>
+          <div className="filter-by">
+            <p>Filter by: </p>
+            <select>
+              <option>All</option>
+              <option>Store</option>
+              <option>Date</option>
+            </select>
+          </div>
 
-              <div className="search">
-                <input type="text" placeholder="Search..." />
-                <img src={search} alt="" />
-              </div>
-            
+          <div className="search">
+            <input type="text" placeholder="Search..." />
+            <img src={search} alt="" />
+          </div>
         </div>
-        
+
         <ShoppingInfo />
       </div>
       <ToastContainer />

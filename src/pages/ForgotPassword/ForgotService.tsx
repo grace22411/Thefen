@@ -1,4 +1,5 @@
-import http, {forgotpassword} from '../../services';
+import { forgotpassword } from "../../services";
+import axios from "axios";
 
-
- export const ForgotPasswordCall = (params:any) => http.post(forgotpassword, params);
+export const ForgotPasswordCall = (params: any) =>
+  axios.post(forgotpassword, params);

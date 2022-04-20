@@ -1,13 +1,6 @@
-import http, { addstore,initiateRequest,getCategory } from '../../services';
+import { addstore, initiateRequest, getCategory } from "../../services";
+import axios from "axios";
 
-const storageVal:any = localStorage.getItem('user');
-const apiToken = JSON.parse(storageVal) // .token
-const auth = {
-    headers: {
-        'Authorization': `Bearer ${apiToken}`
-      }
-}
-
-export const itemCall = (params:any)=> http.post(addstore, params);
-export const makeRequest = (params:any)=> http.post(initiateRequest, params,auth);
-export const  categoryList  = () =>http.get(getCategory, auth)
+export const itemCall = (params: any) => axios.post(addstore, params);
+export const makeRequest = (params: any) => axios.post(initiateRequest, params);
+export const categoryList = () => axios.get(getCategory);
