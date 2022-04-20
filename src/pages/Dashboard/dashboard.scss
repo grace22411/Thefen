@@ -1,0 +1,270 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/general.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
+.dashboard-container {
+  background-color: #f2f5fa;
+}
+
+.dashboard-content {
+  position: relative;
+  top: 40px;
+}
+
+.nav-section {
+  border-bottom: 1px solid #e8ebf0;
+}
+.nav-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+
+  & .menu-option {
+  }
+}
+
+.nav-container,
+.dashboard-info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.menu-option,
+.icon-div {
+  display: flex;
+  align-items: center;
+}
+
+.icon-div {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 3px 0px 2px 1px rgba(63, 63, 68, 0.05);
+}
+
+.dashboard-info {
+  position: relative;
+  top: 30px;
+}
+.dashboard-info-container {
+  display: flex;
+  & .box {
+    padding: 10px;
+
+    &-1 {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    &-2 {
+      flex: 3;
+    }
+  }
+  @include mobile-phones {
+    flex-direction: column;
+  }
+}
+
+.url {
+  &-header {
+    padding: 15px 40px;
+    border-bottom: 1px solid #e8ebf0;
+  }
+}
+
+.shipping-info {
+  height: auto;
+  font-family: "Nunito", sans-serif;
+  .filter {
+    display: flex;
+    justify-content: space-between;
+    padding:10px 30px;
+    .filter-by {
+      display: flex;
+      p{
+        color: #3A434B;
+        margin-top:7px;
+        margin-right: 15px;;
+      }
+      select {
+        border: 1px solid #d7dce0;
+        border-radius: 4px;
+        width:120px;
+        height: 35px;
+      }
+    }
+    .search {
+      width: 35%;
+      border: 1px solid #d7dce0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      height: 35px;
+      display: flex;
+      img{
+          height:15px;
+          width:15px;
+          margin-top: 8px;
+      }
+      input {
+          height:99%;
+          width:90%;
+          padding-left:15px;
+      }
+    }
+  }
+}
+.url,
+.shipping-info {
+  background-color: #fff;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  .ant-table {
+    overflow-x: auto;
+  }
+  table {
+    border-spacing: 0px 5px !important;
+    background-color: transparent !important;
+    overflow-x: auto;
+    .ant-table-thead {
+      tr {
+        th {
+          background-color: #162a5610;
+          font-size: 0.75em;
+          font-weight: 600;
+          color: #162a56;
+        }
+      }
+    }
+    .ant-table-tbody {
+      .ant-table-row {
+        .ant-table-cell {
+          font-size: 10px !important;
+        }
+      }
+    }
+  }
+
+  button {
+    background-color: #162a56;
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 15px;
+  }
+}
+
+.url-form {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.additional-info {
+  margin: 0 auto;
+  width: 95%;
+  font-family: "Nunito", sans-serif;
+}
+
+.input-group-div {
+  font-family: "Nunito", sans-serif;
+  & label {
+    color: #061443;
+    margin-bottom: 10px !important;
+    font-weight: 700;
+    & span {
+      color: #eb651a;
+    }
+  }
+}
+
+.additional-info {
+  margin: 10px auto;
+}
+
+.add-more {
+  position: relative;
+  border: 1px solid #1032a0;
+  & img {
+    position: absolute;
+    width: 18px;
+    left: 8px;
+    height: 18px;
+  }
+}
+
+.add-button-container {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.country-list {
+  background-color: #fff;
+  width: 95%;
+  min-height: 200px;
+  border-radius: 6px;
+  margin-top: 20px;
+  & .text-header,
+  .image-list {
+    padding: 10px;
+  }
+}
+
+.text-header {
+  text-align: center;
+  & h3 {
+    color: #2c4aab;
+    font-family: "Nunito", sans-serif;
+  }
+}
+
+.remove-btn {
+  color: black;
+}
+
+.ant-drawer-content {
+  font-family: "Nunito", sans-serif;
+  .ant-drawer-wrapper-body {
+    .ant-drawer-header {
+      border-bottom: none;
+      .ant-drawer-title {
+        font-size: 20px;
+        color: #162a56;
+        text-align: center;
+        padding-top: 20px;
+      }
+    }
+    .ant-drawer-body {
+      .progress {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: #162a56;
+        h5 {
+          font-size: 14px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+      .footer {
+        text-align: center;
+        bottom: 0;
+        position: absolute;
+        span {
+          color: #ec7631;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.ant-divider {
+  display: none !important;
+}

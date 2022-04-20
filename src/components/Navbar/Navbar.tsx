@@ -11,11 +11,14 @@ export default function Navbar() {
        <FlexContainer className='width-reduce' flexDirection='row' justify='space-between'>
            <Logo/>
            <FlexContainer className='nav-button-container'>
+               <div className='nav-bar'>
+               <i className="far fa-bars"></i>
+               </div>
               <div className='btn-container'>
-                  <Link to="/"><CustomButton borderRadius="100px" bgColor={Colors.blueColor}>Log in</CustomButton></Link>
+                  <Link to="/login"><CustomButton borderRadius="100px" bgColor={Colors.blueColor}>Log in</CustomButton></Link>
                </div>
                <div className='btn-container'>
-                  <Link to="/"><CustomButton borderRadius="100px" fontColor={Colors.blueColor} >Sign up</CustomButton></Link>
+                  <Link to="/register"><CustomButton borderRadius="100px" fontColor={Colors.blueColor} >Sign up</CustomButton></Link>
                </div>
            </FlexContainer>
        </FlexContainer>
