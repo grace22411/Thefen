@@ -1,24 +1,22 @@
 import React from "react";
-import {FlexContainer } from "../../styles";
-import { Logo, PageBox} from "../../components";
-import { Link, useHistory,  } from "react-router-dom";
-
+import { FlexContainer } from "../../styles";
+import { Logo, PageBox } from "../../components";
+import { Link, useHistory } from "react-router-dom";
 import "./Layout.scss";
-
 import { notification, logout, plus } from "../../images";
+const Cookies = require("js-cookie");
 
 //import {useHistory} from "react-router-dom";
 //import { useDispatch } from "react-redux";
 
-export default function Layout(props:any) {
+export default function Layout(props: any) {
+  const { children } = props;
 
-    const { children } = props;
-
-    const history = useHistory();
+  const history = useHistory();
   const logOut = () => {
-    history.push('/login');
-    localStorage.removeItem("token");
-      localStorage.removeItem("user");
+    Cookies.remove("token");
+    localStorage.removeItem("user");
+    history.push("/login");
   };
   return (
     <div className=" container dashboard-container">
@@ -28,10 +26,19 @@ export default function Layout(props:any) {
             <Logo />
             <div className="menu-option">
               <div className="icon-div">
-                <img style={{cursor:"pointer"}} src={notification} alt="notification" />
+                <img
+                  style={{ cursor: "pointer" }}
+                  src={notification}
+                  alt="notification"
+                />
               </div>
               <div className="icon-div">
-                <img style={{cursor:"pointer"}} src={logout} alt="logout"  onClick={logOut}/>
+                <img
+                  style={{ cursor: "pointer" }}
+                  src={logout}
+                  alt="logout"
+                  onClick={logOut}
+                />
               </div>
             </div>
           </FlexContainer>
@@ -42,9 +49,7 @@ export default function Layout(props:any) {
               <PageBox />
               {/* <CountryList classList="country-list" /> */}
             </FlexContainer>
-            <div className="box  box-2">
-                {children}
-            </div>
+            <div className="box  box-2">{children}</div>
           </div>
         </div>
       </div>
