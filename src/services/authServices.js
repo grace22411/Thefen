@@ -1,6 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-
+import history from "../utils/history";
 const API = `https://fierce-crag-66560.herokuapp.com/api/v1`;
 
 export const setAuthToken = (token) => {
@@ -16,7 +16,7 @@ export const setAuthToken = (token) => {
 const clearUserData = (route = "/login", reroute = true) => {
   localStorage.removeItem("userDetails");
   Cookies.remove("token");
-  // reroute && appHistory.replace(route);
+  reroute && history.replace(route);
 };
 
 const isTokenExpired = (token) => {

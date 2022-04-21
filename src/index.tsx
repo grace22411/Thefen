@@ -13,16 +13,17 @@ import {
   PaymentValidation,
 } from "./pages";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import { PrivateRoute } from "./components/Private/PrivateRoute";
 import Address from "./pages/Address/Address";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ChangePassword from "./pages/ChangePassword/ChangePassword";
 import { handleBasicAuth } from "./services/authServices";
+import history from "./utils/history";
 
 const Routings = () => (
-  <Router>
+  <Router history={history}>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/login" component={Login} />
@@ -40,6 +41,7 @@ const Routings = () => (
 
 const App = () => {
   const [loadingApplication, setLoadingApplication] = useState(true);
+
   useEffect(() => {
     handleBasicAuth(
       {
@@ -54,7 +56,7 @@ const App = () => {
       }
     );
   }, []);
-  return !loadingApplication && <Routings />;
+  return !loadingApplication ? <Routings /> : <h1>Loading...</h1>;
 };
 
 const rootElement: any = document.getElementById("root");
