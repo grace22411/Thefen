@@ -13,10 +13,6 @@ const Address = () => {
         </div>
         <div className="url-form">
           <AddressForm />
-
-          <div className="add-button-container">
-            <CustomButton borderRadius="10px" bgColor={Colors.blueColor}>Send</CustomButton>
-          </div>
         </div>
       </div>
     </Layout>
