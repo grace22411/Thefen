@@ -28,3 +28,19 @@ export function getStates(saveStates: Function) {
       //   stopLoader();
     });
 }
+export function getAllShippingInfo(
+  saveInfos: Function,
+  { stopLoader }: { stopLoader: Function }
+) {
+  return axios
+    .get(urls.saveAddress)
+    .then((response) => {
+      saveInfos(response.data);
+    })
+    .catch((error) => {
+      errorNotification(error);
+    })
+    .finally(() => {
+      stopLoader();
+    });
+}

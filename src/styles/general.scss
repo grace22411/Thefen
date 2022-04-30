@@ -1,58 +1,76 @@
-.container{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: scroll;
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: scroll;
 }
 
-select,textarea{
-    border: none;
-    outline: none;
+select,
+textarea {
+  border: none;
+  outline: none;
 }
 //flex container
-@for $i from 1 through 10{
-    .flex-#{$i}{
-        flex:$i
-    }
+@for $i from 1 through 10 {
+  .flex-#{$i} {
+    flex: $i;
+  }
 }
 
-.input-group{
-    &-div{
-        margin:20px;
-    }
-    &-flex{
-        display: flex;
-    }
-    @media only screen and (max-width:600px){
-        display: block;
-        flex-direction: column;
-        width:88% !important;
-    }
-    
+.input-group {
+  &-div {
+    margin: 20px;
+  }
+  &-flex {
+    display: flex;
+  }
+  @media only screen and (max-width: 600px) {
+    display: block;
+    flex-direction: column;
+    width: 88% !important;
+  }
 }
 
-.input-group-div{
-    @media only screen and (max-width:600px){
-        display: block;
-        flex-direction: column;
-        width:100% !important;
-    }
+.input-group-div {
+  @media only screen and (max-width: 600px) {
+    display: block;
+    flex-direction: column;
+    width: 100% !important;
+  }
 }
-.input-box{
-    margin-top: 10px;
-    //border-radius: 12px;
-    & input,select,textarea{
-        padding: 15px 0;
-        background-color: #F6F7FB;
-        box-shadow: inset 0 4px 4px 0 rgba(16, 50, 160, 0.08);
-        height: 100%;
-        width: 100%;
-        padding:15px;
-        border-radius: 12px;
-        box-sizing: border-box;
-    }
-    @media only screen and (max-width:600px){
-        width:100%;
-    }
+.input-box {
+  margin-top: 10px;
+  //border-radius: 12px;
+  & input,
+  select,
+  textarea {
+    padding: 15px 0;
+    background-color: #f6f7fb;
+    box-shadow: inset 0 4px 4px 0 rgba(16, 50, 160, 0.08);
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
+.flex-space-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.centered {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+.pointer {
+  cursor: pointer;
+}

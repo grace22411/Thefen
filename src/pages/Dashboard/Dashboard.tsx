@@ -11,7 +11,7 @@ import ShoppingInfo from "./ShoppingInfo";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CheckEmail from "../../components/Modals/Modal";
-import { Modal } from "antd";
+import { Modal, Spin } from "antd";
 import "../../components/Modals/Modal.scss";
 import mail from "../../images/checkmail.png";
 //import {useHistory} from "react-router-dom";
@@ -20,7 +20,7 @@ import mail from "../../images/checkmail.png";
 export default function Dashboard(props: any) {
   const [ShippingList, setShippingList] = useState([]);
   const [filteredShipping, setFilteredShipping] = useState([]);
-  const [spinner, changeSpinner] = useState(false);
+  const [imLoading, setImLoading] = useState<{ id: string }>({ id: "" });
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleCancel = () => {
@@ -95,26 +95,18 @@ export default function Dashboard(props: any) {
     //console.log(newList);
   };
 
-  const initiateRequest = async () => {
-    changeSpinner(() => true);
-    try {
-      changeSpinner(true);
-      const result = await makeRequest(request);
-      console.log(result.data);
-      if (result.status === 201) {
+  const initiateRequest = () => {
+    setImLoading({ id: "sendingAddress" });
+    makeRequest(request)
+      .then((result) => {
         toast(result.data.message);
-        setIsModalVisible(true);
-      } else {
-      }
-      // if(result.status === 400){
-      //   toast(result.data.message);
-      // }
-
-      changeSpinner(false);
-    } catch (e) {
-      changeSpinner(false);
-      console.log(e);
-    }
+      })
+      .catch((error) => {
+        toast.warn(`Sorry, we couldn't process the request`);
+      })
+      .finally(() => {
+        setImLoading({ id: "" });
+      });
   };
 
   //   const inputChange = (val:any) => {
@@ -155,7 +147,7 @@ export default function Dashboard(props: any) {
               bgColor={Colors.blueColor}
               borderRadius="10px"
             >
-              Send <Spinner start={spinner} />
+              Send {imLoading.id === "sendingAddress" && <Spin />}
             </CustomButton>
 
             <CustomButton
