@@ -4,7 +4,13 @@ import { AddAddress, getStates } from "../../services/api";
 import { Colors, CustomButton } from "../../styles";
 import { Modal } from "antd";
 
-export const AddressForm = () => {
+export const AddressForm = ({
+  visible,
+  setVisibility,
+}: {
+  visible: { id: string };
+  setVisibility: Function;
+}) => {
   const [imLoading, setImLoading] = useState({ id: "" });
   const [states, setStates] = useState<StateDTO[]>([]);
   const [address, setAddress] = useState<AddressDTO>({
@@ -36,7 +42,10 @@ export const AddressForm = () => {
   };
 
   return (
-    <Modal visible={false}>
+    <Modal
+      visible={visible.id === "addNewAddress"}
+      onCancel={() => setVisibility()}
+    >
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="url-form-section">
           <div className="input-group input-group-flex">

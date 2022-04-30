@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ItemForm } from "../../components";
 import { AddressForm } from "../../components/ItemForm/AddressForm";
 import Layout from "../../components/Layout/Layout";
@@ -6,6 +6,7 @@ import { Colors, CustomButton, Header3 } from "../../styles";
 import "./Address.scss";
 
 const Address = () => {
+  const [imVisible, setImVisible] = useState<{ id: string }>({ id: "" });
   const dummyAddresses = [
     {
       name: "Grace Omole",
@@ -84,12 +85,19 @@ const Address = () => {
       <div className="urlpageContainer url">
         <div className="url-header flex-space-btw">
           <Header3 color={Colors.textColor}>Address</Header3>
-          <h3 className="pointer" style={{ color: Colors.blueColor }}>
+          <h3
+            onClick={() => setImVisible({ id: "addNewAddress" })}
+            className="pointer"
+            style={{ color: Colors.blueColor }}
+          >
             + Add New Address
           </h3>
         </div>
         <div className="url-form">
-          <AddressForm />
+          <AddressForm
+            visible={imVisible}
+            setVisibility={() => setImVisible({ id: "" })}
+          />
         </div>
 
         <div className="addressListContianer">
