@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import { notification } from "antd";
+import { notification, Spin } from "antd";
 import "./index.scss";
 import {
   Home,
@@ -56,7 +56,13 @@ const App = () => {
       }
     );
   }, []);
-  return !loadingApplication ? <Routings /> : <h1>Loading...</h1>;
+  return !loadingApplication ? (
+    <Routings />
+  ) : (
+    <div style={{ height: "100vh" }} className="centered">
+      <Spin style={{ margin: "auto" }} />
+    </div>
+  );
 };
 
 const rootElement: any = document.getElementById("root");

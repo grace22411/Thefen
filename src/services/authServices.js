@@ -63,3 +63,13 @@ export const handleBasicAuth = ({ cancelLoading }, { showMessage }) => {
     cancelLoading();
   }
 };
+
+export const isLoggedIn = () => {
+  if (Cookies.get("token")) {
+    // we have a user token
+    const token = Cookies.get("token");
+    return isTokenExpired(token) ? false : true;
+  } else {
+    return false;
+  }
+};
