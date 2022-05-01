@@ -4,7 +4,6 @@ import { Link, useHistory } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { InputBox, Spinner } from "../../components";
-import Cookie from "js-cookie";
 import { setAuthToken } from "../../services/authServices";
 
 import {
@@ -17,6 +16,7 @@ import {
 import { Home } from "../Home/Home";
 import "./login.scss";
 import { loginCall } from "./LoginService";
+const Cookie = require("js-cookie");
 
 //import * as jwt from "jsonwebtoken"
 
@@ -66,7 +66,7 @@ export const Login = (props: any) => {
       }
     } catch (e) {
       changeSpinner(false);
-      updateErrorText("User does not exist");
+      updateErrorText("Cannot process request, please try again");
     }
   };
 
