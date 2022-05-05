@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { profile } from "../../images";
+import { EditProfileModal } from "../Modals/EditProfileModal";
 import "./pagebox.scss";
 export const PageBox = () => {
   const user: any = localStorage.getItem("user");
   const getUser = JSON.parse(user);
+  const [isModalVisible, setIsModalVisible] = useState(true);
+
+  const showModal = (show: boolean = true) => {
+    setIsModalVisible(show);
+  };
 
   return (
     <>
       {user && (
         <div className="profile-box">
+          <EditProfileModal showModal={showModal} isVisible={isModalVisible} />
           <div className="profile-box-section">
             <div className="profile-box-section-1">
               <div className="">
@@ -17,7 +24,9 @@ export const PageBox = () => {
               </div>
               <div className="profile-text">
                 <h3 style={{ color: "#fff" }}>{getUser.result.name}</h3>
-                <p>Edit Profile</p>
+                <p className="pointer" onClick={() => showModal()}>
+                  Edit Profile
+                </p>
               </div>
             </div>
             <div className="profile-box-section-2">
