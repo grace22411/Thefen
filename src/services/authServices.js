@@ -13,7 +13,7 @@ export const setAuthToken = (token) => {
   }
 };
 
-const clearUserData = (route = "/login", reroute = true) => {
+const clearUserData = (route = "/home", reroute = true) => {
   localStorage.removeItem("userDetails");
   Cookies.remove("token");
   reroute && history.replace(route);
