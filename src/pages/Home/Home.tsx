@@ -20,10 +20,14 @@ import {
 import "./home.scss";
 import { isLoggedIn } from "../../services/authServices";
 import { Spin } from "antd";
+import LoginModal from "../../components/Modals/LoginModal";
 
 export const Home = (props: any) => {
   const history = useHistory();
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isModlaVisible, setIsModalVisible] = useState<{ id: string }>({
+    id: "",
+  });
   useEffect(() => {
     const run = isLoggedIn()
       ? () => {
@@ -32,7 +36,7 @@ export const Home = (props: any) => {
         }
       : () => {
           setIsLoading(false);
-          history.replace("/login");
+          history.replace("/");
         };
     run();
   }, []);
@@ -44,7 +48,11 @@ export const Home = (props: any) => {
         </div>
       ) : (
         <div className="page-container">
-          <Navbar />
+          <Navbar setIsModalVisible={setIsModalVisible} />
+          <LoginModal
+            isModlaVisible={isModlaVisible}
+            setIsModalVisible={setIsModalVisible}
+          />
           <FlexContainer
             background={Colors.blueColor}
             className="large-wrapper"

@@ -16,7 +16,7 @@ export default function Layout(props: any) {
   const logOut = () => {
     Cookies.remove("token");
     localStorage.removeItem("user");
-    history.push("/login");
+    history.push("/");
   };
   return (
     <div className=" container dashboard-container">

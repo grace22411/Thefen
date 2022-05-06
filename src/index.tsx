@@ -25,6 +25,7 @@ import "./styles/general.scss";
 
 const Routings = () => (
   <Router history={history}>
+    <ToastContainer />
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/login" component={Login} />

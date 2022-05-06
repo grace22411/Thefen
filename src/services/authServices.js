@@ -13,7 +13,7 @@ export const setAuthToken = (token) => {
   }
 };
 
-const clearUserData = (route = "/home", reroute = true) => {
+const clearUserData = (reroute = true, route = "/") => {
   localStorage.removeItem("userDetails");
   Cookies.remove("token");
   reroute && history.replace(route);
@@ -59,7 +59,7 @@ export const handleBasicAuth = ({ cancelLoading }, { showMessage }) => {
   } else {
     //no previous login/activity
     // showMessage("Please, login 😊");
-    clearUserData("", false);
+    clearUserData();
     cancelLoading();
   }
 };

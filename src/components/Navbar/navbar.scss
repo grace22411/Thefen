@@ -1,24 +1,23 @@
-@import '../../styles/responsive.scss';
+@import "../../styles/responsive.scss";
 
-.nav-button-container{
-    .nav-bar{
-        display: none;
+.nav-button-container {
+  .nav-bar {
+    display: none;
+  }
+  @include mobile-phones {
+    .btn-container {
+      display: none;
     }
-    @include mobile-phones{
-        .btn-container{
-            display: none;
-        }
-        .nav-bar{
-            display:block;
-            color:#000;
-            font-size:20px;
-        }
+    .nav-bar {
+      display: block;
+      color: #000;
+      font-size: 20px;
     }
+  }
 }
 
-.width-reduce{
-    @include mobile-phones{
-        padding:20px 30px !important;
-    }
-    
+.width-reduce {
+  @include mobile-phones {
+    padding: 20px 30px !important;
+  }
 }

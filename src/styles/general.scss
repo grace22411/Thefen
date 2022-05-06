@@ -32,6 +32,9 @@ textarea {
     width: 88% !important;
   }
 }
+.text-center {
+  text-align: center;
+}
 
 .input-group-div {
   @media only screen and (max-width: 600px) {
@@ -40,7 +43,10 @@ textarea {
     width: 100% !important;
   }
 }
-
+.ant-modal-wrap {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
 .antdForm {
   text-align: left;
   input[type="text"],

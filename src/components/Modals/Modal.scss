@@ -25,13 +25,19 @@
 }
 
 .editProfileModal {
+  .modalTitle {
+    font-weight: 700;
+    font-size: 14px;
+    color: $deepBlue;
+    margin-bottom: 30px;
+  }
   .profileImage {
     .blueCover {
       background: #f8f8f8;
       padding: 20px;
       border-radius: 50%;
       margin: auto;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       display: block;
       img {
         height: 50px;
@@ -49,6 +55,80 @@
     margin-top: 10px;
     &:hover {
       background: $buttonBlue;
+    }
+  }
+}
+
+.loginModal {
+  .login {
+    &-welcome-title {
+      font-size: 2.9rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  .login-content-form {
+    text-align: left;
+    & .input-box {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      & label {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        padding: 0;
+      }
+      & input:not([type="checkbox"]) {
+        padding: 15px;
+        background-color: #f6f7fb;
+        box-shadow: 0 4px 4px 0 rgba(16, 50, 160, 0.08);
+        border-radius: 12px;
+      }
+    }
+  }
+
+  .remember-me {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    & p {
+      color: #1032a0;
+      font-weight: 600;
+      flex: 1;
+    }
+    & .input-box {
+      & label {
+        top: 4px;
+        border: 1px solid red;
+      }
+      & input {
+        margin-right: 10px;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  .login-content-button {
+    & button {
+      width: 100%;
+      margin: 0 !important;
+      padding: 15px !important;
+      border-radius: 12px !important ;
+      font-weight: 600 !important;
+    }
+  }
+
+  .create-account {
+    text-align: center;
+    p {
+      color: #000;
+      font-size: 15px;
+    }
+    & .create-text {
+      color: #ea6215;
+      font-weight: 600;
     }
   }
 }

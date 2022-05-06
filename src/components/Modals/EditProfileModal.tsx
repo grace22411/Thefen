@@ -43,6 +43,7 @@ export const EditProfileModal = ({
               <img src="assets/profilePlaceholder.svg" alt="profile"></img>
             </div>
           </div>
+          <p className="text-center modalTitle">Edit Profile</p>
           <Form.Item
             name="fullName"
             rules={[{ required: true, message: "Please, provide a name!" }]}
