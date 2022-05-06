@@ -45,6 +45,7 @@ export const AddressForm = ({
     <Modal
       visible={visible.id === "addNewAddress"}
       onCancel={() => setVisibility()}
+      footer={null}
     >
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="url-form-section">

@@ -21,6 +21,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ChangePassword from "./pages/ChangePassword/ChangePassword";
 import { handleBasicAuth } from "./services/authServices";
 import history from "./utils/history";
+import "./styles/general.scss";
 
 const Routings = () => (
   <Router history={history}>

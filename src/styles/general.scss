@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .container {
   width: 100%;
   height: 100vh;
@@ -37,6 +39,32 @@ textarea {
     flex-direction: column;
     width: 100% !important;
   }
+}
+
+.antdForm {
+  text-align: left;
+  input[type="text"],
+  input[type="number"],
+  input[type="email"] {
+    padding: 15px 0;
+    background-color: #f6f7fb;
+    box-shadow: inset 0 4px 4px 0 rgba(16, 50, 160, 0.08);
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  label {
+    font-weight: 700;
+    font-size: 12px;
+    color: $deepBlue;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+.ant-modal-content {
+  border-radius: 8px;
 }
 .input-box {
   margin-top: 10px;

@@ -189,7 +189,7 @@ export default function Dashboard(props: any) {
         <ShoppingInfo />
       </div>
       <ToastContainer />
-      <Modal visible={isModalVisible} onCancel={handleCancel}>
+      <Modal footer={null} visible={isModalVisible} onCancel={handleCancel}>
         <img src={mail} alt="" />
         <h3>Check Your Mail</h3>
         <p>

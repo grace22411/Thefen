@@ -1,28 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+@import "../../styles/variables.scss";
 
-.ant-modal-content{
-    border-radius: 10px;;
-    font-family: 'Nunito', sans-serif;
-    .ant-modal-body{
-        text-align: center;
-        padding:50px;
-        h3{
-            color:rgba(16, 50, 160, 1);
-            font-size:28px;
-            font-weight: 700;
-        }
-        p{
-            color: #515B7B;
-            b{
-                color:rgba(16, 50, 160, 1);
-            }
-        }
-        img{
-            width:100px;
-        }
+.ant-modal-content {
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  .ant-modal-body {
+    text-align: center;
+    padding: 50px;
+    h3 {
+      color: rgba(16, 50, 160, 1);
+      font-size: 28px;
+      font-weight: 700;
     }
+    p {
+      color: #515b7b;
+      b {
+        color: rgba(16, 50, 160, 1);
+      }
+    }
+    img {
+      width: 100px;
+    }
+  }
 }
 
-.ant-modal-footer{
-    display: none;
+.editProfileModal {
+  .profileImage {
+    .blueCover {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 50%;
+      margin: auto;
+      margin-bottom: 30px;
+      display: block;
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+  .submitBtn {
+    width: 100%;
+    background: $buttonBlue;
+    box-shadow: inset 0px 4px 4px rgba(16, 50, 160, 0.08);
+    border-radius: 12px;
+    color: #fff;
+    height: 47px;
+    margin-top: 10px;
+    &:hover {
+      background: $buttonBlue;
+    }
+  }
 }

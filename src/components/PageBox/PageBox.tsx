@@ -6,7 +6,7 @@ import "./pagebox.scss";
 export const PageBox = () => {
   const user: any = localStorage.getItem("user");
   const getUser = JSON.parse(user);
-  const [isModalVisible, setIsModalVisible] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = (show: boolean = true) => {
     setIsModalVisible(show);
@@ -75,7 +75,6 @@ export const PageBox = () => {
           </div>
         </div>
       )}
-      ;
     </>
   );
 };
